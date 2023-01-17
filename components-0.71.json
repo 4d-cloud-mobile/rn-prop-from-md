@@ -1,0 +1,1921 @@
+{
+  "activityindicator": {
+    "animating": {
+      "raw": "Whether to show the indicator (`true`) or hide it (`false`).\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "type": "bool"
+    },
+    "color": {
+      "raw": "The foreground color of the spinner.\n\n| Type            | Default                                                                                                                                                                                     |\n| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| [color](colors) | `null` (system accent default color)<div class=\"label android\">Android</div><hr/><ins style={{background: '#999'}} className=\"color-box\" />`'#999999'` <div className=\"label ios\">iOS</div> |\n\n---\n\n"
+    },
+    "hidesWhenStopped": {
+      "raw": "Whether the indicator should hide when not animating.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "size": {
+      "raw": "Size of the indicator.\n\n| Type                                                                           | Default   |\n| ------------------------------------------------------------------------------ | --------- |\n| enum(`'small'`, `'large'`)<hr/>number <div class=\"label android\">Android</div> | `'small'` |"
+    }
+  },
+  "button": {
+    "**onPress**": {
+      "raw": "Handler to be called when the user taps the button.\n\n| Type                                      |\n| ----------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) |\n\n---\n\n",
+      "required": true
+    },
+    "**title**": {
+      "raw": "Text to display inside the button. On Android the given title will be converted to the uppercased form.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "required": true,
+      "type": "string"
+    },
+    "accessibilityLabel": {
+      "raw": "Text to display for blindness accessibility features.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "accessibilityLanguage": {
+      "raw": "A value indicating which language should be used by the screen reader when the user interacts with the element. It should follow the [BCP 47 specification](https://www.rfc-editor.org/info/bcp47).\n\nSee the [iOS `accessibilityLanguage` doc](https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage) for more information.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "string"
+    },
+    "accessibilityActions": {
+      "raw": "Accessibility actions allow an assistive technology to programmatically invoke the actions of a component. The `accessibilityActions` property should contain a list of action objects. Each action object should contain the field name and label.\n\nSee the [Accessibility guide](accessibility.md#accessibility-actions) for more information.\n\n| Type  | Required |\n| ----- | -------- |\n| array | No       |\n\n---\n\n",
+      "type": "array"
+    },
+    "onAccessibilityAction": {
+      "raw": "Invoked when the user performs the accessibility actions. The only argument to this function is an event containing the name of the action to perform.\n\nSee the [Accessibility guide](accessibility.md#accessibility-actions) for more information.\n\n| Type     | Required |\n| -------- | -------- |\n| function | No       |\n\n---\n\n",
+      "type": "function"
+    },
+    "color": {
+      "raw": "Color of the text (iOS), or background color of the button (Android).\n\n| Type            | Default                                                                                                                                                                                                                                   |\n| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| [color](colors) | <ins style={{background: '#2196F3'}} className=\"color-box\" /> `'#2196F3'` <div className=\"label android\">Android</div><hr/><ins style={{background: '#007AFF'}} className=\"color-box\" /> `'#007AFF'` <div className=\"label ios\">iOS</div> |\n\n---\n\n"
+    },
+    "disabled": {
+      "raw": "If `true`, disable all interactions for this component.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "type": "bool"
+    },
+    "hasTVPreferredFocus <div class=\"label tv\">TV</div>": {
+      "raw": "TV preferred focus.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "type": "bool"
+    },
+    "nextFocusDown <div class=\"label tv\">TV</div>": {
+      "raw": "Designates the next view to receive focus when the user navigates down. See the [Android documentation](https://developer.android.com/reference/android/view/View.html#attr_android:nextFocusDown).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusForward <div class=\"label tv\">TV</div>": {
+      "raw": "Designates the next view to receive focus when the user navigates forward. See the [Android documentation](https://developer.android.com/reference/android/view/View.html#attr_android:nextFocusForward).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusLeft <div class=\"label tv\">TV</div>": {
+      "raw": "Designates the next view to receive focus when the user navigates left. See the [Android documentation](https://developer.android.com/reference/android/view/View.html#attr_android:nextFocusLeft).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusRight <div class=\"label tv\">TV</div>": {
+      "raw": "Designates the next view to receive focus when the user navigates right. See the [Android documentation](https://developer.android.com/reference/android/view/View.html#attr_android:nextFocusRight).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusUp <div class=\"label tv\">TV</div>": {
+      "raw": "Designates the next view to receive focus when the user navigates up. See the [Android documentation](https://developer.android.com/reference/android/view/View.html#attr_android:nextFocusUp).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "testID": {
+      "raw": "Used to locate this view in end-to-end tests.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "touchSoundDisabled": {
+      "raw": "If `true`, doesn't play system sound on touch.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `false` |",
+      "androidOnly": true,
+      "type": "boolean"
+    }
+  },
+  "flatlist": {
+    "**renderItem**": {
+      "raw": "```tsx\nrenderItem({\n  item: ItemT,\n  index: number,\n  separators: {\n    highlight: () => void;\n    unhighlight: () => void;\n    updateProps: (select: 'leading' | 'trailing', newProps: any) => void;\n  }\n}): JSX.Element;\n```\n\nTakes an item from `data` and renders it into the list.\n\nProvides additional metadata like `index` if you need it, as well as a more generic `separators.updateProps` function which let you set whatever props you want to change the rendering of either the leading separator or trailing separator in case the more common `highlight` and `unhighlight` (which set the `highlighted: boolean` prop) are insufficient for your use case.\n\n| Type     |\n| -------- |\n| function |\n\n- `item` (Object): The item from `data` being rendered.\n- `index` (number): The index corresponding to this item in the `data` array.\n- `separators` (Object)\n  - `highlight` (Function)\n  - `unhighlight` (Function)\n  - `updateProps` (Function)\n    - `select` (enum('leading', 'trailing'))\n    - `newProps` (Object)\n\nExample usage:\n\n```tsx\n<FlatList\n  ItemSeparatorComponent={\n    Platform.OS !== 'android' &&\n    (({highlighted}) => (\n      <View\n        style={[style.separator, highlighted && {marginLeft: 0}]}\n      />\n    ))\n  }\n  data={[{title: 'Title Text', key: 'item1'}]}\n  renderItem={({item, index, separators}) => (\n    <TouchableHighlight\n      key={item.key}\n      onPress={() => this._onPress(item)}\n      onShowUnderlay={separators.highlight}\n      onHideUnderlay={separators.unhighlight}>\n      <View style={{backgroundColor: 'white'}}>\n        <Text>{item.title}</Text>\n      </View>\n    </TouchableHighlight>\n  )}\n/>\n```\n\n---\n\n",
+      "required": true,
+      "type": "function"
+    },
+    "**data**": {
+      "raw": "For simplicity, data is a plain array. If you want to use something else, like an immutable list, use the underlying [`VirtualizedList`](virtualizedlist.md) directly.\n\n| Type  |\n| ----- |\n| array |\n\n---\n\n",
+      "required": true,
+      "type": "array"
+    },
+    "ItemSeparatorComponent": {
+      "raw": "Rendered in between each item, but not at the top or bottom. By default, `highlighted` and `leadingItem` props are provided. `renderItem` provides `separators.highlight`/`unhighlight` which will update the `highlighted` prop, but you can also add custom props with `separators.updateProps`. Can be a React Component (e.g. `SomeComponent`), or a React element (e.g. `<SomeComponent />`).\n\n| Type                         |\n| ---------------------------- |\n| component, function, element |\n\n---\n\n"
+    },
+    "ListEmptyComponent": {
+      "raw": "Rendered when the list is empty. Can be a React Component (e.g. `SomeComponent`), or a React element (e.g. `<SomeComponent />`).\n\n| Type               |\n| ------------------ |\n| component, element |\n\n---\n\n"
+    },
+    "ListFooterComponent": {
+      "raw": "Rendered at the bottom of all the items. Can be a React Component (e.g. `SomeComponent`), or a React element (e.g. `<SomeComponent />`).\n\n| Type               |\n| ------------------ |\n| component, element |\n\n---\n\n"
+    },
+    "ListFooterComponentStyle": {
+      "raw": "Styling for internal View for `ListFooterComponent`.\n\n| Type                           |\n| ------------------------------ |\n| [View Style](view-style-props) |\n\n---\n\n"
+    },
+    "ListHeaderComponent": {
+      "raw": "Rendered at the top of all the items. Can be a React Component (e.g. `SomeComponent`), or a React element (e.g. `<SomeComponent />`).\n\n| Type               |\n| ------------------ |\n| component, element |\n\n---\n\n"
+    },
+    "ListHeaderComponentStyle": {
+      "raw": "Styling for internal View for `ListHeaderComponent`.\n\n| Type                           |\n| ------------------------------ |\n| [View Style](view-style-props) |\n\n---\n\n"
+    },
+    "columnWrapperStyle": {
+      "raw": "Optional custom style for multi-item rows generated when `numColumns > 1`.\n\n| Type                           |\n| ------------------------------ |\n| [View Style](view-style-props) |\n\n---\n\n"
+    },
+    "extraData": {
+      "raw": "A marker property for telling the list to re-render (since it implements `PureComponent`). If any of your `renderItem`, Header, Footer, etc. functions depend on anything outside of the `data` prop, stick it here and treat it immutably.\n\n| Type |\n| ---- |\n| any  |\n\n---\n\n"
+    },
+    "getItemLayout": {
+      "raw": "```tsx\n(data, index) => {length: number, offset: number, index: number}\n```\n\n`getItemLayout` is an optional optimization that allows skipping the measurement of dynamic content if you know the size (height or width) of items ahead of time. `getItemLayout` is efficient if you have fixed size items, for example:\n\n```tsx\n  getItemLayout={(data, index) => (\n    {length: ITEM_HEIGHT, offset: ITEM_HEIGHT * index, index}\n  )}\n```\n\nAdding `getItemLayout` can be a great performance boost for lists of several hundred items. Remember to include separator length (height or width) in your offset calculation if you specify `ItemSeparatorComponent`.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "horizontal": {
+      "raw": "If `true`, renders items next to each other horizontally instead of stacked vertically.\n\n| Type    |\n| ------- |\n| boolean |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "initialNumToRender": {
+      "raw": "How many items to render in the initial batch. This should be enough to fill the screen but not much more. Note these items will never be unmounted as part of the windowed rendering in order to improve perceived performance of scroll-to-top actions.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `10`    |\n\n---\n\n",
+      "type": "number"
+    },
+    "initialScrollIndex": {
+      "raw": "Instead of starting at the top with the first item, start at `initialScrollIndex`. This disables the \"scroll to top\" optimization that keeps the first `initialNumToRender` items always rendered and immediately renders the items starting at this initial index. Requires `getItemLayout` to be implemented.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "inverted": {
+      "raw": "Reverses the direction of scroll. Uses scale transforms of `-1`.\n\n| Type    |\n| ------- |\n| boolean |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "keyExtractor": {
+      "raw": "```tsx\n(item: ItemT, index: number) => string;\n```\n\nUsed to extract a unique key for a given item at the specified index. Key is used for caching and as the react key to track item re-ordering. The default extractor checks `item.key`, then `item.id`, and then falls back to using the index, like React does.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "numColumns": {
+      "raw": "Multiple columns can only be rendered with `horizontal={false}` and will zig-zag like a `flexWrap` layout. Items should all be the same height - masonry layouts are not supported.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "onEndReached": {
+      "raw": "```tsx\n(info: {distanceFromEnd: number}) => void;\n```\n\nCalled once when the scroll position gets within `onEndReachedThreshold` of the rendered content.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onEndReachedThreshold": {
+      "raw": "How far from the end (in units of visible length of the list) the bottom edge of the list must be from the end of the content to trigger the `onEndReached` callback. Thus a value of 0.5 will trigger `onEndReached` when the end of the content is within half the visible length of the list.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "onRefresh": {
+      "raw": "```tsx\n() => void;\n```\n\nIf provided, a standard RefreshControl will be added for \"Pull to Refresh\" functionality. Make sure to also set the `refreshing` prop correctly.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onViewableItemsChanged": {
+      "raw": "Called when the viewability of rows changes, as defined by the `viewabilityConfig` prop.\n\n| Type |\n| ---- |\n\n| (callback: {changed: [ViewToken](viewtoken)[], viewableItems: [ViewToken](viewtoken)[]} => void;\n\n---\n\n"
+    },
+    "progressViewOffset": {
+      "raw": "Set this when offset is needed for the loading indicator to show correctly.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "refreshing": {
+      "raw": "Set this true while waiting for new data from a refresh.\n\n| Type    |\n| ------- |\n| boolean |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "removeClippedSubviews": {
+      "raw": "This may improve scroll performance for large lists. On Android the default value is `true`.\n\n> Note: May have bugs (missing content) in some circumstances - use at your own risk.\n\n| Type    |\n| ------- |\n| boolean |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "viewabilityConfig": {
+      "raw": "See [`ViewabilityHelper.js`](https://github.com/facebook/react-native/blob/master/Libraries/Lists/ViewabilityHelper.js) for flow type and further documentation.\n\n| Type              |\n| ----------------- |\n| ViewabilityConfig |\n\n`viewabilityConfig` takes a type `ViewabilityConfig` an object with following properties\n\n| Property                         | Type    |\n| -------------------------------- | ------- |\n| minimumViewTime                  | number  |\n| viewAreaCoveragePercentThreshold | number  |\n| itemVisiblePercentThreshold      | number  |\n| waitForInteraction               | boolean |\n\nAt least one of the `viewAreaCoveragePercentThreshold` or `itemVisiblePercentThreshold` is required. This needs to be done in the `constructor` to avoid following error ([ref](https://github.com/facebook/react-native/issues/17408)):\n\n```\n  Error: Changing viewabilityConfig on the fly is not supported\n```\n\n```tsx\nconstructor (props) {\n  super(props)\n\n  this.viewabilityConfig = {\n      waitForInteraction: true,\n      viewAreaCoveragePercentThreshold: 95\n  }\n}\n```\n\n```tsx\n<FlatList\n    viewabilityConfig={this.viewabilityConfig}\n  ...\n```\n\n",
+      "minimumViewTime": {
+        "raw": "Minimum amount of time (in milliseconds) that an item must be physically viewable before the viewability callback will be fired. A high number means that scrolling through content without stopping will not mark the content as viewable.\n\n"
+      },
+      "viewAreaCoveragePercentThreshold": {
+        "raw": "Percent of viewport that must be covered for a partially occluded item to count as \"viewable\", 0-100. Fully visible items are always considered viewable. A value of 0 means that a single pixel in the viewport makes the item viewable, and a value of 100 means that an item must be either entirely visible or cover the entire viewport to count as viewable.\n\n"
+      },
+      "itemVisiblePercentThreshold": {
+        "raw": "Similar to `viewAreaCoveragePercentThreshold`, but considers the percent of the item that is visible, rather than the fraction of the viewable area it covers.\n\n"
+      },
+      "waitForInteraction": {
+        "raw": "Nothing is considered viewable until the user scrolls or `recordInteraction` is called after render.\n\n---\n\n"
+      },
+      "type": "boolean"
+    },
+    "viewabilityConfigCallbackPairs": {
+      "raw": "List of `ViewabilityConfig`/`onViewableItemsChanged` pairs. A specific `onViewableItemsChanged` will be called when its corresponding `ViewabilityConfig`'s conditions are met. See `ViewabilityHelper.js` for flow type and further documentation.\n\n| Type                                   |\n| -------------------------------------- |\n| array of ViewabilityConfigCallbackPair |\n\n"
+    }
+  },
+  "image": {
+    "accessible": {
+      "raw": "When true, indicates the image is an accessibility element.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "type": "bool"
+    },
+    "accessibilityLabel": {
+      "raw": "The text that's read by the screen reader when the user interacts with the image.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "alt": {
+      "raw": "A string that defines an alternative text description of the image, which will be read by the screen reader when the user interacts with it. Using this will automatically mark this element as accessible.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "blurRadius": {
+      "raw": "blurRadius: the blur radius of the blur filter added to the image.\n\n| Type   |\n| ------ |\n| number |\n\n> Tip: On IOS, you will need to increase `blurRadius` by more than `5`.\n\n---\n\n",
+      "type": "number"
+    },
+    "capInsets": {
+      "raw": "When the image is resized, the corners of the size specified by `capInsets` will stay a fixed size, but the center content and borders of the image will be stretched. This is useful for creating resizable rounded buttons, shadows, and other resizable assets. More info in the [official Apple documentation](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIImage_Class/index.html#//apple_ref/occ/instm/UIImage/resizableImageWithCapInsets).\n\n| Type         |\n| ------------ |\n| [Rect](rect) |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "crossOrigin": {
+      "raw": "A string of a keyword specifying the CORS mode to use when fetching the image resource. It works similar to crossorigin attribute in HTML.\n\n- `anonymous`: No exchange of user credentials in the image request.\n- `use-credentials`: Sets `Access-Control-Allow-Credentials` header value to `true` in the image request.\n\n| Type                                     | Default       |\n| ---------------------------------------- | ------------- |\n| enum(`'anonymous'`, `'use-credentials'`) | `'anonymous'` |\n\n---\n\n"
+    },
+    "defaultSource": {
+      "raw": "A static image to display while loading the image source.\n\n| Type                             |\n| -------------------------------- |\n| [ImageSource](image#imagesource) |\n\n> **Note:** On Android, the default source prop is ignored on debug builds.\n\n---\n\n"
+    },
+    "fadeDuration": {
+      "raw": "Fade animation duration in milliseconds.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `300`   |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "height": {
+      "raw": "Height of the image component.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "loadingIndicatorSource": {
+      "raw": "Similarly to `source`, this property represents the resource used to render the loading indicator for the image. The loading indicator is displayed until image is ready to be displayed, typically after the image is downloaded.\n\n| Type                                                  |\n| ----------------------------------------------------- |\n| [ImageSource](image#imagesource) (`uri` only), number |\n\n---\n\n"
+    },
+    "objectFit": {
+      "raw": "Determines how to resize the image when the frame doesn't match the raw image dimensions.\n\n| Type                                                   | Default   |\n| ------------------------------------------------------ | --------- |\n| enum(`'cover'`, `'contain'`, `'fill'`, `'scale-down'`) | `'cover'` |\n\n---\n\n"
+    },
+    "onError": {
+      "raw": "Invoked on load error.\n\n| Type                                |\n| ----------------------------------- |\n| (`{nativeEvent: {error} }`) => void |\n\n---\n\n"
+    },
+    "onLayout": {
+      "raw": "Invoked on mount and on layout changes.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [LayoutEvent]layoutevent)} => void |\n\n---\n\n"
+    },
+    "onLoad": {
+      "raw": "Invoked when load completes successfully.\n\n**Example:** `onLoad={({nativeEvent: {source: {width, height}}}) => setImageRealSize({width, height})}`\n\n| Type                                                          |\n| ------------------------------------------------------------- |\n| ({nativeEvent: [ImageLoadEvent]image#imageloadevent)} => void |\n\n---\n\n"
+    },
+    "onLoadEnd": {
+      "raw": "Invoked when load either succeeds or fails.\n\n| Type       |\n| ---------- |\n| () => void |\n\n---\n\n"
+    },
+    "onLoadStart": {
+      "raw": "Invoked on load start.\n\n**Example:** `onLoadStart={() => this.setState({loading: true})}`\n\n| Type       |\n| ---------- |\n| () => void |\n\n---\n\n"
+    },
+    "onPartialLoad": {
+      "raw": "Invoked when a partial load of the image is complete. The definition of what constitutes a \"partial load\" is loader specific though this is meant for progressive JPEG loads.\n\n| Type       |\n| ---------- |\n| () => void |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "onProgress": {
+      "raw": "Invoked on download progress.\n\n| Type                                        |\n| ------------------------------------------- |\n| (`{nativeEvent: {loaded, total} }`) => void |\n\n---\n\n"
+    },
+    "progressiveRenderingEnabled": {
+      "raw": "When `true`, enables progressive jpeg streaming - https://frescolib.org/docs/progressive-jpegs.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "bool"
+    },
+    "resizeMethod": {
+      "raw": "The mechanism that should be used to resize the image when the image's dimensions differ from the image view's dimensions. Defaults to `auto`.\n\n- `auto`: Use heuristics to pick between `resize` and `scale`.\n\n- `resize`: A software operation which changes the encoded image in memory before it gets decoded. This should be used instead of `scale` when the image is much larger than the view.\n\n- `scale`: The image gets drawn downscaled or upscaled. Compared to `resize`, `scale` is faster (usually hardware accelerated) and produces higher quality images. This should be used if the image is smaller than the view. It should also be used if the image is slightly bigger than the view.\n\nMore details about `resize` and `scale` can be found at http://frescolib.org/docs/resizing.\n\n| Type                                  | Default  |\n| ------------------------------------- | -------- |\n| enum(`'auto'`, `'resize'`, `'scale'`) | `'auto'` |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "referrerPolicy": {
+      "raw": "A string indicating which referrer to use when fetching the resource. Sets the value for `Referrer-Policy` header in the image request. Works similar to `referrerpolicy` attribute in HTML.\n\n| Type                                                                                                                                                                                     | Default                             |\n| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |\n| enum(`'no-referrer'`, `'no-referrer-when-downgrade'`, `'origin'`, `'origin-when-cross-origin'`, `'same-origin'`, `'strict-origin'`, `'strict-origin-when-cross-origin'`, `'unsafe-url'`) | `'strict-origin-when-cross-origin'` |\n\n---\n\n"
+    },
+    "resizeMode": {
+      "raw": "Determines how to resize the image when the frame doesn't match the raw image dimensions. Defaults to `cover`.\n\n- `cover`: Scale the image uniformly (maintain the image's aspect ratio) so that\n\n  - both dimensions (width and height) of the image will be equal to or larger than the corresponding dimension of the view (minus padding)\n  - at least one dimension of the scaled image will be equal to the corresponding dimension of the view (minus padding)\n\n- `contain`: Scale the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).\n\n- `stretch`: Scale width and height independently, This may change the aspect ratio of the src.\n\n- `repeat`: Repeat the image to cover the frame of the view. The image will keep its size and aspect ratio, unless it is larger than the view, in which case it will be scaled down uniformly so that it is contained in the view.\n\n- `center`: Center the image in the view along both dimensions. If the image is larger than the view, scale it down uniformly so that it is contained in the view.\n\n| Type                                                              | Default   |\n| ----------------------------------------------------------------- | --------- |\n| enum(`'cover'`, `'contain'`, `'stretch'`, `'repeat'`, `'center'`) | `'cover'` |\n\n---\n\n"
+    },
+    "source": {
+      "raw": "The image source (either a remote URL or a local file resource).\n\nThis prop can also contain several remote URLs, specified together with their width and height and potentially with scale/other URI arguments. The native side will then choose the best `uri` to display based on the measured size of the image container. A `cache` property can be added to control how networked request interacts with the local cache. (For more information see [Cache Control for Images](images#cache-control-ios-only)).\n\nThe currently supported formats are `png`, `jpg`, `jpeg`, `bmp`, `gif`, `webp`, `psd` (iOS only). In addition, iOS supports several RAW image formats. Refer to Apple's documentation for the current list of supported camera models (for iOS 12, see https://support.apple.com/en-ca/HT208967).\n\n| Type                             |\n| -------------------------------- |\n| [ImageSource](image#imagesource) |\n\n---\n\n"
+    },
+    "src": {
+      "raw": "A string representing the remote URL of the image. This prop has precedence over `source` prop.\n\n**Example:** `src={'https://reactnative.dev/img/tiny_logo.png'}`\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "srcSet": {
+      "raw": "A string representing comma separated list of possible candidate image source. Each image source contains a URL of an image and a pixel density descriptor. If no descriptor is specified, it defaults to descriptor of `1x`.\n\nIf `srcSet` does not contain a `1x` descriptor, the value in `src` is used as image source with `1x` descriptor (if provided).\n\nThis prop has precedence over both the `src` and `source` props.\n\n**Example:** `srcSet={'https://reactnative.dev/img/tiny_logo.png 1x, https://reactnative.dev/img/header_logo.svg 2x'}`\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "style": {
+      "raw": "| Type                                                                                                                                                 |\n| ---------------------------------------------------------------------------------------------------------------------------------------------------- |\n| [Image Style Props](image-style-props#props), [Layout Props](layout-props#props), [Shadow Props](shadow-props#props), [Transforms](transforms#props) |\n\n---\n\n"
+    },
+    "testID": {
+      "raw": "A unique identifier for this element to be used in UI Automation testing scripts.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "tintColor": {
+      "raw": "Changes the color of all non-transparent pixels to the `tintColor`.\n\n| Type               |\n| ------------------ |\n| [color](colors.md) |\n\n---\n\n"
+    },
+    "width": {
+      "raw": "Width of the image component.\n\n| Type   |\n| ------ |\n| number |\n\n",
+      "type": "number"
+    }
+  },
+  "imagebackground": {
+    "imageStyle": {
+      "raw": "| Type                                |\n| ----------------------------------- |\n| [Image Style](image-style-props.md) |\n\n---\n\n"
+    },
+    "imageRef": {
+      "raw": "Allows to set a reference to the inner `Image` component\n\n| Type                                                  |\n| ----------------------------------------------------- |\n| [Ref](https://reactjs.org/docs/refs-and-the-dom.html) |\n\n---\n\n"
+    },
+    "style": {
+      "raw": "| Type                              |\n| --------------------------------- |\n| [View Style](view-style-props.md) |"
+    }
+  },
+  "keyboardavoidingview": {
+    "behavior": {
+      "raw": "Specify how to react to the presence of the keyboard.\n\n> Android and iOS both interact with this prop differently. On both iOS and Android, setting `behavior` is recommended.\n\n| Type                                        |\n| ------------------------------------------- |\n| enum(`'height'`, `'position'`, `'padding'`) |\n\n---\n\n"
+    },
+    "contentContainerStyle": {
+      "raw": "The style of the content container (View) when behavior is `'position'`.\n\n| Type                              |\n| --------------------------------- |\n| [View Style](view-style-props.md) |\n\n---\n\n"
+    },
+    "enabled": {
+      "raw": "Enabled or disabled KeyboardAvoidingView.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `true`  |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "keyboardVerticalOffset": {
+      "raw": "This is the distance between the top of the user screen and the react native view, may be non-zero in some use cases.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `0`     |",
+      "type": "number"
+    }
+  },
+  "modal": {
+    "animated": {
+      "raw": "> **Deprecated.** Use the [`animationType`](modal.md#animationtype) prop instead.\n\n---\n\n"
+    },
+    "animationType": {
+      "raw": "The `animationType` prop controls how the modal animates.\n\nPossible values:\n\n- `slide` slides in from the bottom,\n- `fade` fades into view,\n- `none` appears without an animation.\n\n| Type                                | Default |\n| ----------------------------------- | ------- |\n| enum(`'none'`, `'slide'`, `'fade'`) | `none`  |\n\n---\n\n"
+    },
+    "hardwareAccelerated": {
+      "raw": "The `hardwareAccelerated` prop controls whether to force hardware acceleration for the underlying window.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "bool"
+    },
+    "onDismiss": {
+      "raw": "The `onDismiss` prop allows passing a function that will be called once the modal has been dismissed.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "function"
+    },
+    "onOrientationChange": {
+      "raw": "The `onOrientationChange` callback is called when the orientation changes while the modal is being displayed. The orientation provided is only 'portrait' or 'landscape'. This callback is also called on initial render, regardless of the current orientation.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "function"
+    },
+    "onRequestClose": {
+      "raw": "The `onRequestClose` callback is called when the user taps the hardware back button on Android or the menu button on Apple TV. Because of this required prop, be aware that `BackHandler` events will not be emitted as long as the modal is open.\nOn iOS, this callback is called when a Modal is being dismissed using a drag gesture when `presentationStyle` is `pageSheet or formSheet`\n\n| Type                                                                                                                                                                                           |\n| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| function <div className=\"label basic required\">Required</div><div className=\"label android\">Android</div><div className=\"label tv\">TV</div><hr />function <div className=\"label ios\">iOS</div> |\n\n---\n\n"
+    },
+    "onShow": {
+      "raw": "The `onShow` prop allows passing a function that will be called once the modal has been shown.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "presentationStyle": {
+      "raw": "The `presentationStyle` prop controls how the modal appears (generally on larger devices such as iPad or plus-sized iPhones). See https://developer.apple.com/reference/uikit/uimodalpresentationstyle for details.\n\nPossible values:\n\n- `fullScreen` covers the screen completely\n- `pageSheet` covers portrait-width view centered (only on larger devices)\n- `formSheet` covers narrow-width view centered (only on larger devices)\n- `overFullScreen` covers the screen completely, but allows transparency\n\n| Type                                                                   | Default                                                                             |\n| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |\n| enum(`'fullScreen'`, `'pageSheet'`, `'formSheet'`, `'overFullScreen'`) | `fullScreen` if `transparent={false}`<hr />`overFullScreen` if `transparent={true}` |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "statusBarTranslucent": {
+      "raw": "The `statusBarTranslucent` prop determines whether your modal should go under the system statusbar.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "bool"
+    },
+    "supportedOrientations": {
+      "raw": "The `supportedOrientations` prop allows the modal to be rotated to any of the specified orientations. On iOS, the modal is still restricted by what's specified in your app's Info.plist's UISupportedInterfaceOrientations field.\n\n> When using `presentationStyle` of `pageSheet` or `formSheet`, this property will be ignored by iOS.\n\n| Type                                                                                                           | Default        |\n| -------------------------------------------------------------------------------------------------------------- | -------------- |\n| array of enums(`'portrait'`, `'portrait-upside-down'`, `'landscape'`, `'landscape-left'`, `'landscape-right'`) | `['portrait']` |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "transparent": {
+      "raw": "The `transparent` prop determines whether your modal will fill the entire view. Setting this to `true` will render the modal over a transparent background.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "type": "bool"
+    },
+    "visible": {
+      "raw": "The `visible` prop determines whether your modal is visible.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |",
+      "type": "bool"
+    }
+  },
+  "pressable": {
+    "android_disableSound": {
+      "raw": "If true, doesn't play Android system sound on press.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `false` |\n\n",
+      "androidOnly": true,
+      "type": "boolean"
+    },
+    "android_ripple": {
+      "raw": "Enables the Android ripple effect and configures its properties.\n\n| Type                                   |\n| -------------------------------------- |\n| [RippleConfig](pressable#rippleconfig) |\n\n",
+      "androidOnly": true
+    },
+    "children": {
+      "raw": "Either children or a function that receives a boolean reflecting whether the component is currently pressed.\n\n| Type                     |\n| ------------------------ |\n| [React Node](react-node) |\n\n"
+    },
+    "unstable_pressDelay": {
+      "raw": "Duration (in milliseconds) to wait after press down before calling `onPressIn`.\n\n| Type   |\n| ------ |\n| number |\n\n",
+      "type": "number"
+    },
+    "delayLongPress": {
+      "raw": "Duration (in milliseconds) from `onPressIn` before `onLongPress` is called.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `500`   |\n\n",
+      "type": "number"
+    },
+    "disabled": {
+      "raw": "Whether the press behavior is disabled.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `false` |\n\n",
+      "type": "boolean"
+    },
+    "hitSlop": {
+      "raw": "Sets additional distance outside of element in which a press can be detected.\n\n| Type                   |\n| ---------------------- |\n| [Rect](rect) or number |\n\n"
+    },
+    "onLongPress": {
+      "raw": "Called if the time after `onPressIn` lasts longer than 500 milliseconds. This time period can be customized with [`delayLongPress`](#delaylongpress).\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n"
+    },
+    "onPress": {
+      "raw": "Called after `onPressOut`.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n"
+    },
+    "onPressIn": {
+      "raw": "Called immediately when a touch is engaged, before `onPressOut` and `onPress`.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n"
+    },
+    "onPressOut": {
+      "raw": "Called when a touch is released.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n"
+    },
+    "pressRetentionOffset": {
+      "raw": "Additional distance outside of this view in which a touch is considered a press before `onPressOut` is triggered.\n\n| Type                   | Default                                      |\n| ---------------------- | -------------------------------------------- |\n| [Rect](rect) or number | `{bottom: 30, left: 20, right: 20, top: 20}` |\n\n"
+    },
+    "style": {
+      "raw": "Either view styles or a function that receives a boolean reflecting whether the component is currently pressed and returns view styles.\n\n| Type                           |\n| ------------------------------ |\n| [View Style](view-style-props) |\n\n"
+    },
+    "testOnly_pressed": {
+      "raw": "Used only for documentation or testing (e.g. snapshot testing).\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `false` |\n\n",
+      "type": "boolean"
+    }
+  },
+  "refreshcontrol": {
+    "**refreshing**": {
+      "raw": "Whether the view should be indicating an active refresh.\n\n| Type    |\n| ------- |\n| boolean |\n\n---\n\n",
+      "required": true,
+      "type": "boolean"
+    },
+    "colors": {
+      "raw": "The colors (at least one) that will be used to draw the refresh indicator.\n\n| Type                         |\n| ---------------------------- |\n| array of [colors](colors.md) |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "enabled": {
+      "raw": "Whether the pull to refresh functionality is enabled.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `true`  |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "boolean"
+    },
+    "onRefresh": {
+      "raw": "Called when the view starts refreshing.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "progressBackgroundColor": {
+      "raw": "The background color of the refresh indicator.\n\n| Type               |\n| ------------------ |\n| [color](colors.md) |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "progressViewOffset": {
+      "raw": "Progress view top offset.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `0`     |\n\n---\n\n",
+      "type": "number"
+    },
+    "size": {
+      "raw": "Size of the refresh indicator.\n\n| Type                         | Default     |\n| ---------------------------- | ----------- |\n| enum(`'default'`, `'large'`) | `'default'` |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "tintColor": {
+      "raw": "The color of the refresh indicator.\n\n| Type               |\n| ------------------ |\n| [color](colors.md) |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "title": {
+      "raw": "The title displayed under the refresh indicator.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "string"
+    },
+    "titleColor": {
+      "raw": "The color of the refresh indicator title.\n\n| Type               |\n| ------------------ |\n| [color](colors.md) |",
+      "iOSOnly": true
+    }
+  },
+  "scrollview": {
+    "StickyHeaderComponent": {
+      "raw": "A React Component that will be used to render sticky headers, should be used together with `stickyHeaderIndices`. You may need to set this component if your sticky header uses custom transforms, for example, when you want your list to have an animated and hidable header. If component have not been provided, the default [`ScrollViewStickyHeader`](https://github.com/facebook/react-native/blob/master/Libraries/Components/ScrollView/ScrollViewStickyHeader.js) component will be used.\n\n| Type               |\n| ------------------ |\n| component, element |\n\n---\n\n"
+    },
+    "alwaysBounceHorizontal": {
+      "raw": "When true, the scroll view bounces horizontally when it reaches the end even if the content is smaller than the scroll view itself.\n\n| Type | Default                                               |\n| ---- | ----------------------------------------------------- |\n| bool | `true` when `horizontal={true}`<hr/>`false` otherwise |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "alwaysBounceVertical": {
+      "raw": "When true, the scroll view bounces vertically when it reaches the end even if the content is smaller than the scroll view itself.\n\n| Type | Default                                             |\n| ---- | --------------------------------------------------- |\n| bool | `false` when `vertical={true}`<hr/>`true` otherwise |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "automaticallyAdjustContentInsets": {
+      "raw": "Controls whether iOS should automatically adjust the content inset for scroll views that are placed behind a navigation bar or tab bar/toolbar.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "automaticallyAdjustKeyboardInsets": {
+      "raw": "Controls whether the ScrollView should automatically adjust its `contentInset` and `scrollViewInsets` when the Keyboard changes its size.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "automaticallyAdjustsScrollIndicatorInsets": {
+      "raw": "Controls whether iOS should automatically adjust the scroll indicator insets. See Apple's [documentation on the property](https://developer.apple.com/documentation/uikit/uiscrollview/3198043-automaticallyadjustsscrollindica).\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "bounces": {
+      "raw": "When true, the scroll view bounces when it reaches the end of the content if the content is larger than the scroll view along the axis of the scroll direction. When `false`, it disables all bouncing even if the `alwaysBounce*` props are `true`.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "bouncesZoom": {
+      "raw": "When `true`, gestures can drive zoom past min/max and the zoom will animate to the min/max value at gesture end, otherwise the zoom will not exceed the limits.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "canCancelContentTouches": {
+      "raw": "When `false`, once tracking starts, won't try to drag if the touch moves.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "centerContent": {
+      "raw": "When `true`, the scroll view automatically centers the content when the content is smaller than the scroll view bounds; when the content is larger than the scroll view, this property has no effect.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "contentContainerStyle": {
+      "raw": "These styles will be applied to the scroll view content container which wraps all of the child views. Example:\n\n```\nreturn (\n  <ScrollView contentContainerStyle={styles.contentContainer}>\n  </ScrollView>\n);\n...\nconst styles = StyleSheet.create({\n  contentContainer: {\n    paddingVertical: 20\n  }\n});\n```\n\n| Type                           |\n| ------------------------------ |\n| [View Style](view-style-props) |\n\n---\n\n"
+    },
+    "contentInset": {
+      "raw": "The amount by which the scroll view content is inset from the edges of the scroll view.\n\n| Type                                                               | Default                                  |\n| ------------------------------------------------------------------ | ---------------------------------------- |\n| object: {top: number, left: number, bottom: number, right: number} | `{top: 0, left: 0, bottom: 0, right: 0}` |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "contentInsetAdjustmentBehavior": {
+      "raw": "This property specifies how the safe area insets are used to modify the content area of the scroll view. Available on iOS 11 and later.\n\n| Type                                                           | Default   |\n| -------------------------------------------------------------- | --------- |\n| enum(`'automatic'`, `'scrollableAxes'`, `'never'`, `'always'`) | `'never'` |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "contentOffset": {
+      "raw": "Used to manually set the starting scroll offset.\n\n| Type  | Default        |\n| ----- | -------------- |\n| Point | `{x: 0, y: 0}` |\n\n---\n\n"
+    },
+    "decelerationRate": {
+      "raw": "A floating-point number that determines how quickly the scroll view decelerates after the user lifts their finger. You may also use string shortcuts `\"normal\"` and `\"fast\"` which match the underlying iOS settings for `UIScrollViewDecelerationRateNormal` and `UIScrollViewDecelerationRateFast` respectively.\n\n- `'normal'` 0.998 on iOS, 0.985 on Android.\n- `'fast'`, 0.99 on iOS, 0.9 on Android.\n\n| Type                               | Default    |\n| ---------------------------------- | ---------- |\n| enum(`'fast'`, `'normal'`), number | `'normal'` |\n\n---\n\n"
+    },
+    "directionalLockEnabled": {
+      "raw": "When true, the ScrollView will try to lock to only vertical or horizontal scrolling while dragging.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "disableIntervalMomentum": {
+      "raw": "When true, the scroll view stops on the next index (in relation to scroll position at release) regardless of how fast the gesture is. This can be used for pagination when the page is less than the width of the horizontal ScrollView or the height of the vertical ScrollView.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "type": "bool"
+    },
+    "disableScrollViewPanResponder": {
+      "raw": "When true, the default JS pan responder on the ScrollView is disabled, and full control over touches inside the ScrollView is left to its child components. This is particularly useful if `snapToInterval` is enabled, since it does not follow typical touch patterns. Do not use this on regular ScrollView use cases without `snapToInterval` as it may cause unexpected touches to occur while scrolling.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "type": "bool"
+    },
+    "endFillColor": {
+      "raw": "Sometimes a scrollview takes up more space than its content fills. When this is the case, this prop will fill the rest of the scrollview with a color to avoid setting a background and creating unnecessary overdraw. This is an advanced optimization that is not needed in the general case.\n\n| Type            |\n| --------------- |\n| [color](colors) |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "fadingEdgeLength": {
+      "raw": "Fades out the edges of the the scroll content.\n\nIf the value is greater than `0`, the fading edges will be set accordingly to the current scroll direction and position, indicating if there is more content to show.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `0`     |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "horizontal": {
+      "raw": "When `true`, the scroll view's children are arranged horizontally in a row instead of vertically in a column.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "type": "bool"
+    },
+    "indicatorStyle": {
+      "raw": "The style of the scroll indicators.\n\n- `'default'` same as `black`.\n- `'black'`, scroll indicator is `black`. This style is good against a light background.\n- `'white'`, scroll indicator is `white`. This style is good against a dark background.\n\n| Type                                    | Default     |\n| --------------------------------------- | ----------- |\n| enum(`'default'`, `'black'`, `'white'`) | `'default'` |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "invertStickyHeaders": {
+      "raw": "If sticky headers should stick at the bottom instead of the top of the ScrollView. This is usually used with inverted ScrollViews.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "type": "bool"
+    },
+    "keyboardDismissMode": {
+      "raw": "Determines whether the keyboard gets dismissed in response to a drag.\n\n- `'none'`, drags do not dismiss the keyboard.\n- `'on-drag'`, the keyboard is dismissed when a drag begins.\n\n**iOS Only**\n\n- `'interactive'`, the keyboard is dismissed interactively with the drag and moves in synchrony with the touch, dragging upwards cancels the dismissal. On Android this is not supported and it will have the same behavior as `'none'`.\n\n| Type                                                                                                                                                            | Default  |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |\n| enum(`'none'`, `'on-drag'`) <div className=\"label android\">Android</div><hr />enum(`'none'`, `'on-drag'`, `'interactive'`) <div className=\"label ios\">iOS</div> | `'none'` |\n\n---\n\n"
+    },
+    "keyboardShouldPersistTaps": {
+      "raw": "Determines when the keyboard should stay visible after a tap.\n\n- `'never'` tapping outside of the focused text input when the keyboard is up dismisses the keyboard. When this happens, children won't receive the tap.\n- `'always'`, the keyboard will not dismiss automatically, and the scroll view will not catch taps, but children of the scroll view can catch taps.\n- `'handled'`, the keyboard will not dismiss automatically when the tap was handled by children of the scroll view (or captured by an ancestor).\n- `false`, **_deprecated_**, use `'never'` instead\n- `true`, **_deprecated_**, use `'always'` instead\n\n| Type                                                      | Default   |\n| --------------------------------------------------------- | --------- |\n| enum(`'always'`, `'never'`, `'handled'`, `false`, `true`) | `'never'` |\n\n---\n\n"
+    },
+    "maintainVisibleContentPosition": {
+      "raw": "When set, the scroll view will adjust the scroll position so that the first child that is currently visible and at or beyond `minIndexForVisible` will not change position. This is useful for lists that are loading content in both directions, e.g. a chat thread, where new messages coming in might otherwise cause the scroll position to jump. A value of 0 is common, but other values such as 1 can be used to skip loading spinners or other content that should not maintain position.\n\nThe optional `autoscrollToTopThreshold` can be used to make the content automatically scroll to the top after making the adjustment if the user was within the threshold of the top before the adjustment was made. This is also useful for chat-like applications where you want to see new messages scroll into place, but not if the user has scrolled up a ways and it would be disruptive to scroll a bunch.\n\nCaveat 1: Reordering elements in the scrollview with this enabled will probably cause jumpiness and jank. It can be fixed, but there are currently no plans to do so. For now, don't re-order the content of any ScrollViews or Lists that use this feature.\n\nCaveat 2: This uses `contentOffset` and `frame.origin` in native code to compute visibility. Occlusion, transforms, and other complexity won't be taken into account as to whether content is \"visible\" or not.\n\n| Type                                                                   |\n| ---------------------------------------------------------------------- |\n| object: {minIndexForVisible: number, autoscrollToTopThreshold: number} |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "maximumZoomScale": {
+      "raw": "The maximum allowed zoom scale.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `1.0`   |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "number"
+    },
+    "minimumZoomScale": {
+      "raw": "The minimum allowed zoom scale.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `1.0`   |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "number"
+    },
+    "nestedScrollEnabled": {
+      "raw": "Enables nested scrolling for Android API level 21+.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "bool"
+    },
+    "onContentSizeChange": {
+      "raw": "Called when scrollable content view of the ScrollView changes.\n\nThe handler function will recieve two parameters: the content width and content height `(contentWidth, contentHeight)`.\n\nIt's implemented using onLayout handler attached to the content container which this ScrollView renders.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onMomentumScrollBegin": {
+      "raw": "Called when the momentum scroll starts (scroll which occurs as the ScrollView starts gliding).\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onMomentumScrollEnd": {
+      "raw": "Called when the momentum scroll ends (scroll which occurs as the ScrollView glides to a stop).\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onScroll": {
+      "raw": "Fires at most once per frame during scrolling. The frequency of the events can be controlled using the `scrollEventThrottle` prop. The event has the following shape (all values are numbers):\n\n```js\n{\n  nativeEvent: {\n    contentInset: {bottom, left, right, top},\n    contentOffset: {x, y},\n    contentSize: {height, width},\n    layoutMeasurement: {height, width},\n    zoomScale\n  }\n}\n```\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onScrollBeginDrag": {
+      "raw": "Called when the user begins to drag the scroll view.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onScrollEndDrag": {
+      "raw": "Called when the user stops dragging the scroll view and it either stops or begins to glide.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onScrollToTop": {
+      "raw": "Fires when the scroll view scrolls to top after the status bar has been tapped.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "function"
+    },
+    "overScrollMode": {
+      "raw": "Used to override default value of overScroll mode.\n\nPossible values:\n\n- `'auto'` - Allow a user to over-scroll this view only if the content is large enough to meaningfully scroll.\n- `'always'` - Always allow a user to over-scroll this view.\n- `'never'` - Never allow a user to over-scroll this view.\n\n| Type                                  | Default  |\n| ------------------------------------- | -------- |\n| enum(`'auto'`, `'always'`, `'never'`) | `'auto'` |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "pagingEnabled": {
+      "raw": "When true, the scroll view stops on multiples of the scroll view's size when scrolling. This can be used for horizontal pagination.\n\n> Note: Vertical pagination is not supported on Android.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "type": "bool"
+    },
+    "persistentScrollbar": {
+      "raw": "Causes the scrollbars not to turn transparent when they are not in use.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "bool"
+    },
+    "pinchGestureEnabled": {
+      "raw": "When true, ScrollView allows use of pinch gestures to zoom in and out.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "refreshControl": {
+      "raw": "A RefreshControl component, used to provide pull-to-refresh functionality for the ScrollView. Only works for vertical ScrollViews (`horizontal` prop must be `false`).\n\nSee [RefreshControl](refreshcontrol).\n\n| Type    |\n| ------- |\n| element |\n\n---\n\n"
+    },
+    "removeClippedSubviews": {
+      "raw": "Experimental: When `true`, offscreen child views (whose `overflow` value is `hidden`) are removed from their native backing superview when offscreen. This can improve scrolling performance on long lists.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "type": "bool"
+    },
+    "scrollEnabled": {
+      "raw": "When false, the view cannot be scrolled via touch interaction.\n\nNote that the view can always be scrolled by calling `scrollTo`.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "type": "bool"
+    },
+    "scrollEventThrottle": {
+      "raw": "This controls how often the scroll event will be fired while scrolling (as a time interval in ms). A lower number yields better accuracy for code that is tracking the scroll position, but can lead to scroll performance problems due to the volume of information being sent over the bridge. You will not notice a difference between values set between 1-16 as the JS run loop is synced to the screen refresh rate. If you do not need precise scroll position tracking, set this value higher to limit the information being sent across the bridge. The default value is `0`, which results in the scroll event being sent only once each time the view is scrolled.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `0`     |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "number"
+    },
+    "scrollIndicatorInsets": {
+      "raw": "The amount by which the scroll view indicators are inset from the edges of the scroll view. This should normally be set to the same value as the `contentInset`.\n\n| Type                                                               | Default                                  |\n| ------------------------------------------------------------------ | ---------------------------------------- |\n| object: {top: number, left: number, bottom: number, right: number} | `{top: 0, left: 0, bottom: 0, right: 0}` |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "scrollPerfTag": {
+      "raw": "Tag used to log scroll performance on this scroll view. Will force momentum events to be turned on (see sendMomentumEvents). This doesn't do anything out of the box and you need to implement a custom native FpsListener for it to be useful.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "string"
+    },
+    "scrollToOverflowEnabled": {
+      "raw": "When `true`, the scroll view can be programmatically scrolled beyond its content size.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "scrollsToTop": {
+      "raw": "When `true`, the scroll view scrolls to top when the status bar is tapped.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "showsHorizontalScrollIndicator": {
+      "raw": "When `true`, shows a horizontal scroll indicator.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "type": "bool"
+    },
+    "showsVerticalScrollIndicator": {
+      "raw": "When `true`, shows a vertical scroll indicator.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "type": "bool"
+    },
+    "snapToAlignment": {
+      "raw": "When `snapToInterval` is set, `snapToAlignment` will define the relationship of the snapping to the scroll view.\n\nPossible values:\n\n- `'start'` will align the snap at the left (horizontal) or top (vertical).\n- `'center'` will align the snap in the center.\n- `'end'` will align the snap at the right (horizontal) or bottom (vertical).\n\n| Type                                 | Default   |\n| ------------------------------------ | --------- |\n| enum(`'start'`, `'center'`, `'end'`) | `'start'` |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "snapToEnd": {
+      "raw": "Use in conjunction with `snapToOffsets`. By default, the end of the list counts as a snap offset. Set `snapToEnd` to false to disable this behavior and allow the list to scroll freely between its end and the last `snapToOffsets` offset.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "type": "bool"
+    },
+    "snapToInterval": {
+      "raw": "When set, causes the scroll view to stop at multiples of the value of `snapToInterval`. This can be used for paginating through children that have lengths smaller than the scroll view. Typically used in combination with `snapToAlignment` and `decelerationRate=\"fast\"`. Overrides less configurable `pagingEnabled` prop.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "snapToOffsets": {
+      "raw": "When set, causes the scroll view to stop at the defined offsets. This can be used for paginating through variously sized children that have lengths smaller than the scroll view. Typically used in combination with `decelerationRate=\"fast\"`. Overrides less configurable `pagingEnabled` and `snapToInterval` props.\n\n| Type            |\n| --------------- |\n| array of number |\n\n---\n\n"
+    },
+    "snapToStart": {
+      "raw": "Use in conjunction with `snapToOffsets`. By default, the beginning of the list counts as a snap offset. Set `snapToStart` to `false` to disable this behavior and allow the list to scroll freely between its start and the first `snapToOffsets` offset.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `true`  |\n\n---\n\n",
+      "type": "bool"
+    },
+    "stickyHeaderHiddenOnScroll": {
+      "raw": "When set to `true`, sticky header will be hidden when scrolling down the list, and it will dock at the top of the list when scrolling up.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "type": "bool"
+    },
+    "stickyHeaderIndices": {
+      "raw": "An array of child indices determining which children get docked to the top of the screen when scrolling. For example, passing `stickyHeaderIndices={[0]}` will cause the first child to be fixed to the top of the scroll view. You can also use like [x,y,z] to make multiple items sticky when they are at the top. This property is not supported in conjunction with `horizontal={true}`.\n\n| Type            |\n| --------------- |\n| array of number |\n\n---\n\n"
+    },
+    "zoomScale": {
+      "raw": "The current scale of the scroll view content.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `1.0`   |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "number"
+    }
+  },
+  "sectionlist": {
+    "**renderItem**": {
+      "raw": "Default renderer for every item in every section. Can be over-ridden on a per-section basis. Should return a React element.\n\n| Type     |\n| -------- |\n| function |\n\nThe render function will be passed an object with the following keys:\n\n- 'item' (object) - the item object as specified in this section's `data` key\n- 'index' (number) - Item's index within the section.\n- 'section' (object) - The full section object as specified in `sections`.\n- 'separators' (object) - An object with the following keys:\n  - 'highlight' (function) - `() => void`\n  - 'unhighlight' (function) - `() => void`\n  - 'updateProps' (function) - `(select, newProps) => void`\n    - 'select' (enum) - possible values are 'leading', 'trailing'\n    - 'newProps' (object)\n\n---\n\n",
+      "required": true,
+      "type": "function"
+    },
+    "**sections**": {
+      "raw": "The actual data to render, akin to the `data` prop in [`FlatList`](flatlist.md).\n\n| Type                                        |\n| ------------------------------------------- |\n| array of [Section](sectionlist.md#section)s |\n\n---\n\n",
+      "required": true
+    },
+    "extraData": {
+      "raw": "A marker property for telling the list to re-render (since it implements `PureComponent`). If any of your `renderItem`, Header, Footer, etc. functions depend on anything outside of the `data` prop, stick it here and treat it immutably.\n\n| Type |\n| ---- |\n| any  |\n\n---\n\n"
+    },
+    "initialNumToRender": {
+      "raw": "How many items to render in the initial batch. This should be enough to fill the screen but not much more. Note these items will never be unmounted as part of the windowed rendering in order to improve perceived performance of scroll-to-top actions.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `10`    |\n\n---\n\n",
+      "type": "number"
+    },
+    "inverted": {
+      "raw": "Reverses the direction of scroll. Uses scale transforms of -1.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `false` |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "ItemSeparatorComponent": {
+      "raw": "Rendered in between each item, but not at the top or bottom. By default, `highlighted`, `section`, and `[leading/trailing][Item/Section]` props are provided. `renderItem` provides `separators.highlight`/`unhighlight` which will update the `highlighted` prop, but you can also add custom props with `separators.updateProps`. Can be a React Component (e.g. `SomeComponent`), or a React element (e.g. `<SomeComponent />`).\n\n| Type                         |\n| ---------------------------- |\n| component, function, element |\n\n---\n\n"
+    },
+    "keyExtractor": {
+      "raw": "Used to extract a unique key for a given item at the specified index. Key is used for caching and as the React key to track item re-ordering. The default extractor checks `item.key`, then falls back to using the index, like React does. Note that this sets keys for each item, but each overall section still needs its own key.\n\n| Type                                    |\n| --------------------------------------- |\n| (item: object, index: number) => string |\n\n---\n\n"
+    },
+    "ListEmptyComponent": {
+      "raw": "Rendered when the list is empty. Can be a React Component (e.g. `SomeComponent`), or a React element (e.g. `<SomeComponent />`).\n\n| Type               |\n| ------------------ |\n| component, element |\n\n---\n\n"
+    },
+    "ListFooterComponent": {
+      "raw": "Rendered at the very end of the list. Can be a React Component (e.g. `SomeComponent`), or a React element (e.g. `<SomeComponent />`).\n\n| Type               |\n| ------------------ |\n| component, element |\n\n---\n\n"
+    },
+    "ListHeaderComponent": {
+      "raw": "Rendered at the very beginning of the list. Can be a React Component (e.g. `SomeComponent`), or a React element (e.g. `<SomeComponent />`).\n\n| Type               |\n| ------------------ |\n| component, element |\n\n---\n\n"
+    },
+    "onEndReached": {
+      "raw": "Called once when the scroll position gets within `onEndReachedThreshold` of the rendered content.\n\n| Type                                      |\n| ----------------------------------------- |\n| (info: {distanceFromEnd: number}) => void |\n\n---\n\n"
+    },
+    "onEndReachedThreshold": {
+      "raw": "How far from the end (in units of visible length of the list) the bottom edge of the list must be from the end of the content to trigger the `onEndReached` callback. Thus a value of 0.5 will trigger `onEndReached` when the end of the content is within half the visible length of the list.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `2`     |\n\n---\n\n",
+      "type": "number"
+    },
+    "onRefresh": {
+      "raw": "If provided, a standard RefreshControl will be added for \"Pull to Refresh\" functionality. Make sure to also set the `refreshing` prop correctly. To offset the RefreshControl from the top (e.g. by 100 pts), use `progressViewOffset={100}`.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onViewableItemsChanged": {
+      "raw": "Called when the viewability of rows changes, as defined by the `viewabilityConfig` prop.\n\n| Type                                                                                                             |\n| ---------------------------------------------------------------------------------------------------------------- |\n| (callback: {changed: array of [ViewToken](viewtoken)s, viewableItems: array of [ViewToken](viewtoken)s}) => void |\n\n---\n\n"
+    },
+    "refreshing": {
+      "raw": "Set this true while waiting for new data from a refresh.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `false` |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "removeClippedSubviews": {
+      "raw": "> Note: may have bugs (missing content) in some circumstances - use at your own risk.\n\nThis may improve scroll performance for large lists.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `false` |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "renderSectionFooter": {
+      "raw": "Rendered at the bottom of each section.\n\n| Type                                                                 |\n| -------------------------------------------------------------------- |\n| (info: {section: [Section](sectionlist#section)}) => element, `null` |\n\n---\n\n"
+    },
+    "renderSectionHeader": {
+      "raw": "Rendered at the top of each section. These stick to the top of the `ScrollView` by default on iOS. See `stickySectionHeadersEnabled`.\n\n| Type                                                                 |\n| -------------------------------------------------------------------- |\n| (info: {section: [Section](sectionlist#section)}) => element, `null` |\n\n---\n\n"
+    },
+    "SectionSeparatorComponent": {
+      "raw": "Rendered at the top and bottom of each section (note this is different from `ItemSeparatorComponent` which is only rendered between items). These are intended to separate sections from the headers above and below and typically have the same highlight response as `ItemSeparatorComponent`. Also receives `highlighted`, `[leading/trailing][Item/Section]`, and any custom props from `separators.updateProps`.\n\n| Type               |\n| ------------------ |\n| component, element |\n\n---\n\n"
+    },
+    "stickySectionHeadersEnabled": {
+      "raw": "Makes section headers stick to the top of the screen until the next one pushes it off. Only enabled by default on iOS because that is the platform standard there.\n\n| Type    | Default                                                                                          |\n| ------- | ------------------------------------------------------------------------------------------------ |\n| boolean | `false` <div class=\"label android\">Android</div><hr/>`true` <div className=\"label ios\">iOS</div> |\n\n",
+      "type": "boolean"
+    }
+  },
+  "statusbar": {
+    "animated": {
+      "raw": "If the transition between status bar property changes should be animated. Supported for `backgroundColor`, `barStyle` and `hidden` properties.\n\n| Type    | Required | Default |\n| ------- | -------- | ------- |\n| boolean | No       | `false` |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "backgroundColor": {
+      "raw": "The background color of the status bar.\n\n| Type            | Required | Default                                                                |\n| --------------- | -------- | ---------------------------------------------------------------------- |\n| [color](colors) | No       | default system StatusBar background color, or `'black'` if not defined |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "barStyle": {
+      "raw": "Sets the color of the status bar text.\n\nOn Android, this will only have an impact on API versions 23 and above.\n\n| Type                                       | Required | Default     |\n| ------------------------------------------ | -------- | ----------- |\n| [StatusBarStyle](statusbar#statusbarstyle) | No       | `'default'` |\n\n---\n\n"
+    },
+    "hidden": {
+      "raw": "If the status bar is hidden.\n\n| Type    | Required | Default |\n| ------- | -------- | ------- |\n| boolean | No       | `false` |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "networkActivityIndicatorVisible": {
+      "raw": "If the network activity indicator should be visible.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `false` |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "boolean"
+    },
+    "showHideTransition": {
+      "raw": "The transition effect when showing and hiding the status bar using the `hidden` prop.\n\n| Type                                               | Default  |\n| -------------------------------------------------- | -------- |\n| [StatusBarAnimation](statusbar#statusbaranimation) | `'fade'` |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "translucent": {
+      "raw": "If the status bar is translucent. When translucent is set to `true`, the app will draw under the status bar. This is useful when using a semi transparent status bar color.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `false` |\n\n",
+      "androidOnly": true,
+      "type": "boolean"
+    }
+  },
+  "switch": {
+    "disabled": {
+      "raw": "If true the user won't be able to toggle the switch.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "type": "bool"
+    },
+    "ios_backgroundColor": {
+      "raw": "On iOS, custom color for the background. This background color can be seen either when the switch value is `false` or when the switch is disabled (and the switch is translucent).\n\n| Type               |\n| ------------------ |\n| [color](colors.md) |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "onChange": {
+      "raw": "Invoked when the user tries to change the value of the switch. Receives the change event as an argument. If you want to only receive the new value, use `onValueChange` instead.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onValueChange": {
+      "raw": "Invoked when the user tries to change the value of the switch. Receives the new value as an argument. If you want to instead receive an event, use `onChange`.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "thumbColor": {
+      "raw": "Color of the foreground switch grip. If this is set on iOS, the switch grip will lose its drop shadow.\n\n| Type               |\n| ------------------ |\n| [color](colors.md) |\n\n---\n\n"
+    },
+    "trackColor": {
+      "raw": "Custom colors for the switch track.\n\n_iOS_: When the switch value is `false`, the track shrinks into the border. If you want to change the color of the background exposed by the shrunken track, use [`ios_backgroundColor`](switch.md#ios_backgroundColor).\n\n| Type                                                          |\n| ------------------------------------------------------------- |\n| object: {false: [color](colors.md), true: [color](colors.md)} |\n\n---\n\n"
+    },
+    "value": {
+      "raw": "The value of the switch. If true the switch will be turned on. Default value is false.\n\n| Type |\n| ---- |\n| bool |",
+      "type": "bool"
+    }
+  },
+  "text": {
+    "accessibilityHint": {
+      "raw": "An accessibility hint helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "accessibilityLanguage": {
+      "raw": "A value indicating which language should be used by the screen reader when the user interacts with the element. It should follow the [BCP 47 specification](https://www.rfc-editor.org/info/bcp47).\n\nSee the [iOS `accessibilityLanguage` doc](https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage) for more information.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "string"
+    },
+    "accessibilityLabel": {
+      "raw": "Overrides the text that's read by the screen reader when the user interacts with the element. By default, the label is constructed by traversing all the children and accumulating all the `Text` nodes separated by space.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "accessibilityRole": {
+      "raw": "Tells the screen reader to treat the currently focused on element as having a specific role.\n\nOn iOS, these roles map to corresponding Accessibility Traits. Image button has the same functionality as if the trait was set to both 'image' and 'button'. See the [Accessibility guide](accessibility.md#accessibilitytraits-ios) for more information.\n\nOn Android, these roles have similar functionality on TalkBack as adding Accessibility Traits does on Voiceover in iOS\n\n| Type                                                 |\n| ---------------------------------------------------- |\n| [AccessibilityRole](accessibility#accessibilityrole) |\n\n---\n\n"
+    },
+    "accessibilityState": {
+      "raw": "Tells the screen reader to treat the currently focused on element as being in a specific state.\n\nYou can provide one state, no state, or multiple states. The states must be passed in through an object. Ex: `{selected: true, disabled: true}`.\n\n| Type                                                   |\n| ------------------------------------------------------ |\n| [AccessibilityState](accessibility#accessibilitystate) |\n\n---\n\n"
+    },
+    "accessibilityActions": {
+      "raw": "Accessibility actions allow an assistive technology to programmatically invoke the actions of a component. The `accessibilityActions` property should contain a list of action objects. Each action object should contain the field name and label.\n\nSee the [Accessibility guide](accessibility.md#accessibility-actions) for more information.\n\n| Type  | Required |\n| ----- | -------- |\n| array | No       |\n\n---\n\n",
+      "type": "array"
+    },
+    "onAccessibilityAction": {
+      "raw": "Invoked when the user performs the accessibility actions. The only argument to this function is an event containing the name of the action to perform.\n\nSee the [Accessibility guide](accessibility.md#accessibility-actions) for more information.\n\n| Type     | Required |\n| -------- | -------- |\n| function | No       |\n\n---\n\n",
+      "type": "function"
+    },
+    "accessible": {
+      "raw": "When set to `true`, indicates that the view is an accessibility element.\n\nSee the [Accessibility guide](accessibility#accessible-ios-android) for more information.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `true`  |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "adjustsFontSizeToFit": {
+      "raw": "Specifies whether fonts should be scaled down automatically to fit given style constraints.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `false` |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "allowFontScaling": {
+      "raw": "Specifies whether fonts should scale to respect Text Size accessibility settings.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `true`  |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "android_hyphenationFrequency": {
+      "raw": "Sets the frequency of automatic hyphenation to use when determining word breaks on Android API Level 23+.\n\n| Type                                | Default  |\n| ----------------------------------- | -------- |\n| enum(`'none'`, `'normal'`,`'full'`) | `'none'` |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "aria-busy": {
+      "raw": "Indicates an element is being modified and that assistive technologies may want to wait until the changes are complete before informing the user about the update.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "aria-checked": {
+      "raw": "Indicates the state of a checkable element. This field can either take a boolean or the \"mixed\" string to represent mixed checkboxes.\n\n| Type             | Default |\n| ---------------- | ------- |\n| boolean, 'mixed' | false   |\n\n---\n\n",
+      "type": "boolean, 'mixed'"
+    },
+    "aria-disabled": {
+      "raw": "Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "aria-expanded": {
+      "raw": "Indicates whether an expandable element is currently expanded or collapsed.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "aria-label": {
+      "raw": "Defines a string value that labels an interactive element.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "aria-selected": {
+      "raw": "Indicates whether a selectable element is currently selected or not.\n\n| Type    |\n| ------- |\n| boolean |\n\n",
+      "type": "boolean"
+    },
+    "dataDetectorType": {
+      "raw": "Determines the types of data converted to clickable URLs in the text element. By default, no data types are detected.\n\nYou can provide only one type.\n\n| Type                                                          | Default  |\n| ------------------------------------------------------------- | -------- |\n| enum(`'phoneNumber'`, `'link'`, `'email'`, `'none'`, `'all'`) | `'none'` |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "disabled": {
+      "raw": "Specifies the disabled state of the text view for testing purposes.\n\n| Type | Default |\n| ---- | ------- |\n| bool | `false` |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "bool"
+    },
+    "ellipsizeMode": {
+      "raw": "When `numberOfLines` is set, this prop defines how the text will be truncated. `numberOfLines` must be set in conjunction with this prop.\n\nThis can be one of the following values:\n\n- `head` - The line is displayed so that the end fits in the container and the missing text at the beginning of the line is indicated by an ellipsis glyph. e.g., \"...wxyz\"\n- `middle` - The line is displayed so that the beginning and end fit in the container and the missing text in the middle is indicated by an ellipsis glyph. \"ab...yz\"\n- `tail` - The line is displayed so that the beginning fits in the container and the missing text at the end of the line is indicated by an ellipsis glyph. e.g., \"abcd...\"\n- `clip` - Lines are not drawn past the edge of the text container.\n\n> On Android, when `numberOfLines` is set to a value higher than `1`, only `tail` value will work correctly.\n\n| Type                                           | Default |\n| ---------------------------------------------- | ------- |\n| enum(`'head'`, `'middle'`, `'tail'`, `'clip'`) | `tail`  |\n\n---\n\n"
+    },
+    "id": {
+      "raw": "Used to locate this view from native code. Has precedence over `nativeID` prop.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "maxFontSizeMultiplier": {
+      "raw": "Specifies the largest possible scale a font can reach when `allowFontScaling` is enabled. Possible values:\n\n- `null/undefined`: inherit from the parent node or the global default (0)\n- `0`: no max, ignore parent/global default\n- `>= 1`: sets the `maxFontSizeMultiplier` of this node to this value\n\n| Type   | Default     |\n| ------ | ----------- |\n| number | `undefined` |\n\n---\n\n",
+      "type": "number"
+    },
+    "minimumFontScale": {
+      "raw": "Specifies the smallest possible scale a font can reach when `adjustsFontSizeToFit` is enabled. (values 0.01-1.0).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "number"
+    },
+    "nativeID": {
+      "raw": "Used to locate this view from native code.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "numberOfLines": {
+      "raw": "Used to truncate the text with an ellipsis after computing the text layout, including line wrapping, such that the total number of lines does not exceed this number. Setting this property to `0` will result in unsetting this value, which means that no lines restriction will be applied.\n\nThis prop is commonly used with `ellipsizeMode`.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `0`     |\n\n---\n\n",
+      "type": "number"
+    },
+    "onLayout": {
+      "raw": "Invoked on mount and on layout changes.\n\n| Type                                                |\n| --------------------------------------------------- |\n| ({nativeEvent: [LayoutEvent](layoutevent)}) => void |\n\n---\n\n"
+    },
+    "onLongPress": {
+      "raw": "This function is called on long press.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onMoveShouldSetResponder": {
+      "raw": "Does this view want to \"claim\" touch responsiveness? This is called for every touch move on the `View` when it is not the responder.\n\n| Type                                                 |\n| ---------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => boolean |\n\n---\n\n"
+    },
+    "onPress": {
+      "raw": "This function is called on press.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onResponderGrant": {
+      "raw": "The View is now responding to touch events. This is the time to highlight and show the user what is happening.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onResponderMove": {
+      "raw": "The user is moving their finger.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onResponderRelease": {
+      "raw": "Fired at the end of the touch.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onResponderTerminate": {
+      "raw": "The responder has been taken from the `View`. Might be taken by other views after a call to `onResponderTerminationRequest`, or might be taken by the OS without asking (e.g., happens with control center/ notification center on iOS)\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onResponderTerminationRequest": {
+      "raw": "Some other `View` wants to become a responder and is asking this `View` to release its responder. Returning `true` allows its release.\n\n| Type                                                 |\n| ---------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => boolean |\n\n---\n\n"
+    },
+    "onStartShouldSetResponderCapture": {
+      "raw": "If a parent `View` wants to prevent a child `View` from becoming a responder on a touch start, it should have this handler which returns `true`.\n\n| Type                                                 |\n| ---------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => boolean |\n\n---\n\n"
+    },
+    "onTextLayout": {
+      "raw": "Invoked on Text layout change.\n\n| Type                                                 |\n| ---------------------------------------------------- |\n| ([`TextLayoutEvent`](text#textlayoutevent)) => mixed |\n\n---\n\n"
+    },
+    "pressRetentionOffset": {
+      "raw": "When the scroll view is disabled, this defines how far your touch may move off of the button, before deactivating the button. Once deactivated, try moving it back and you'll see that the button is once again reactivated! Move it back and forth several times while the scroll view is disabled. Ensure you pass in a constant to reduce memory allocations.\n\n| Type                 |\n| -------------------- |\n| [Rect](rect), number |\n\n---\n\n"
+    },
+    "role": {
+      "raw": "`role` communicates the purpose of a component to the user of an assistive technology. Has precedence over the [`accessibilityRole`](text#accessibilityrole) prop.\n\n| Type                       |\n| -------------------------- |\n| [Role](accessibility#role) |\n\n---\n\n"
+    },
+    "selectable": {
+      "raw": "Lets the user select text, to use the native copy and paste functionality.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `false` |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "selectionColor": {
+      "raw": "The highlight color of the text.\n\n| Type            |\n| --------------- |\n| [color](colors) |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "style": {
+      "raw": "| Type                                                                 |\n| -------------------------------------------------------------------- |\n| [Text Style](text-style-props), [View Style Props](view-style-props) |\n\n---\n\n"
+    },
+    "suppressHighlighting": {
+      "raw": "When `true`, no visual change is made when text is pressed down. By default, a gray oval highlights the text on press down.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | `false` |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "boolean"
+    },
+    "testID": {
+      "raw": "Used to locate this view in end-to-end tests.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "textBreakStrategy": {
+      "raw": "Set text break strategy on Android API Level 23+, possible values are `simple`, `highQuality`, `balanced`.\n\n| Type                                            | Default       |\n| ----------------------------------------------- | ------------- |\n| enum(`'simple'`, `'highQuality'`, `'balanced'`) | `highQuality` |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "userSelect": {
+      "raw": "It allows the user to select text and to use the native copy and paste functionality. Has precedence over the `selectable` prop.\n\n| Type                                                     | Default |\n| -------------------------------------------------------- | ------- |\n| enum(`'auto'`, `'text'`, `'none'`, `'contain'`, `'all'`) | `none`  |\n\n---\n\n"
+    },
+    "lineBreakStrategyIOS": {
+      "raw": "Set line break strategy on iOS 14+. Possible values are `none`, `standard`, `hangul-word` and `push-out`.\n\n| Type                                                        | Default  |\n| ----------------------------------------------------------- | -------- |\n| enum(`'none'`, `'standard'`, `'hangul-word'`, `'push-out'`) | `'none'` |\n\n",
+      "iOSOnly": true
+    }
+  },
+  "textinput": {
+    "allowFontScaling": {
+      "raw": "Specifies whether fonts should scale to respect Text Size accessibility settings. The default is `true`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "autoCapitalize": {
+      "raw": "Tells `TextInput` to automatically capitalize certain characters. This property is not supported by some keyboard types such as `name-phone-pad`.\n\n- `characters`: all characters.\n- `words`: first letter of each word.\n- `sentences`: first letter of each sentence (_default_).\n- `none`: don't auto capitalize anything.\n\n| Type                                             |\n| ------------------------------------------------ |\n| enum('none', 'sentences', 'words', 'characters') |\n\n---\n\n"
+    },
+    "autoComplete": {
+      "raw": "Specifies autocomplete hints for the system, so it can provide autofill. On Android, the system will always attempt to offer autofill by using heuristics to identify the type of content. To disable autocomplete, set `autoComplete` to `off`.\n\nThe following values work across platforms:\n\n- `additional-name`\n- `address-line1`\n- `address-line2`\n- `cc-number`\n- `country`\n- `current-password`\n- `email`\n- `family-name`\n- `given-name`\n- `honorific-prefix`\n- `honorific-suffix`\n- `name`\n- `new-password`\n- `off`\n- `one-time-code`\n- `postal-code`\n- `street-address`\n- `tel`\n- `username`\n\n<div class=\"label basic ios\">iOS</div>\n\nThe following values work on iOS only:\n\n- `nickname`\n- `organization`\n- `organization-title`\n- `url`\n\n<div class=\"label basic android\">Android</div>\n\nThe following values work on Android only:\n\n- `birthdate-day`\n- `birthdate-full`\n- `birthdate-month`\n- `birthdate-year`\n- `cc-csc`\n- `cc-exp`\n- `cc-exp-day`\n- `cc-exp-month`\n- `cc-exp-year`\n- `gender`\n- `name-family`\n- `name-given`\n- `name-middle`\n- `name-middle-initial`\n- `name-prefix`\n- `name-suffix`\n- `password`\n- `password-new`\n- `postal-address`\n- `postal-address-country`\n- `postal-address-extended`\n- `postal-address-extended-postal-code`\n- `postal-address-locality`\n- `postal-address-region`\n- `sms-otp`\n- `tel-country-code`\n- `tel-national`\n- `tel-device`\n- `username-new`\n\n| Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |\n| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| enum('additional-name', 'address-line1', 'address-line2', 'birthdate-day', 'birthdate-full', 'birthdate-month', 'birthdate-year', 'cc-csc', 'cc-exp', 'cc-exp-day', 'cc-exp-month', 'cc-exp-year', 'cc-number', 'country', 'current-password', 'email', 'family-name', 'gender', 'given-name', 'honorific-prefix', 'honorific-suffix', 'name', 'name-family', 'name-given', 'name-middle', 'name-middle-initial', 'name-prefix', 'name-suffix', 'new-password', 'nickname', 'one-time-code', 'organization', 'organization-title', 'password', 'password-new', 'postal-address', 'postal-address-country', 'postal-address-extended', 'postal-address-extended-postal-code', 'postal-address-locality', 'postal-address-region', 'postal-code', 'street-address', 'sms-otp', 'tel', 'tel-country-code', 'tel-national', 'tel-device', 'url', 'username', 'username-new', 'off') |\n\n---\n\n"
+    },
+    "autoCorrect": {
+      "raw": "If `false`, disables auto-correct. The default value is `true`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "autoFocus": {
+      "raw": "If `true`, focuses the input on `componentDidMount` or `useEffect`. The default value is `false`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "blurOnSubmit": {
+      "raw": "If `true`, the text field will blur when submitted. The default value is true for single-line fields and false for multiline fields. Note that for multiline fields, setting `blurOnSubmit` to `true` means that pressing return will blur the field and trigger the `onSubmitEditing` event instead of inserting a newline into the field.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "caretHidden": {
+      "raw": "If `true`, caret is hidden. The default value is `false`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "clearButtonMode": {
+      "raw": "When the clear button should appear on the right side of the text view. This property is supported only for single-line TextInput component. The default value is `never`.\n\n| Type                                                       |\n| ---------------------------------------------------------- |\n| enum('never', 'while-editing', 'unless-editing', 'always') |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "clearTextOnFocus": {
+      "raw": "If `true`, clears the text field automatically when editing begins.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "contextMenuHidden": {
+      "raw": "If `true`, context menu is hidden. The default value is `false`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "dataDetectorTypes": {
+      "raw": "Determines the types of data converted to clickable URLs in the text input. Only valid if `multiline={true}` and `editable={false}`. By default no data types are detected.\n\nYou can provide one type or an array of many types.\n\nPossible values for `dataDetectorTypes` are:\n\n- `'phoneNumber'`\n- `'link'`\n- `'address'`\n- `'calendarEvent'`\n- `'none'`\n- `'all'`\n\n| Type                                                                                                                                                     |\n| -------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| enum('phoneNumber', 'link', 'address', 'calendarEvent', 'none', 'all'), ,array of enum('phoneNumber', 'link', 'address', 'calendarEvent', 'none', 'all') |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "defaultValue": {
+      "raw": "Provides an initial value that will change when the user starts typing. Useful for use-cases where you do not want to deal with listening to events and updating the value prop to keep the controlled state in sync.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "cursorColor": {
+      "raw": "When provided it will set the color of the cursor (or \"caret\") in the component. Unlike the behavior of `selectionColor` the cursor color will be set independently from the color of the text selection box.\n\n| Type               |\n| ------------------ |\n| [color](colors.md) |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "disableFullscreenUI": {
+      "raw": "When `false`, if there is a small amount of space available around a text input (e.g. landscape orientation on a phone), the OS may choose to have the user edit the text inside of a full screen text input mode. When `true`, this feature is disabled and users will always edit the text directly inside of the text input. Defaults to `false`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "bool"
+    },
+    "editable": {
+      "raw": "If `false`, text is not editable. The default value is `true`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "enablesReturnKeyAutomatically": {
+      "raw": "If `true`, the keyboard disables the return key when there is no text and automatically enables it when there is text. The default value is `false`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "enterKeyHint": {
+      "raw": "Determines what text should be shown to the return key. Has precedence over the `returnKeyType` prop.\n\nThe following values work across platforms:\n\n- `enter`\n- `done`\n- `next`\n- `search`\n- `send`\n\n_Android Only_\n\nThe following values work on Android only:\n\n- `previous`\n\n| Type                                                        |\n| ----------------------------------------------------------- |\n| enum('enter', 'done', 'next', 'previous', 'search', 'send') |\n\n---\n\n"
+    },
+    "importantForAutofill": {
+      "raw": "Tells the operating system whether the individual fields in your app should be included in a view structure for autofill purposes on Android API Level 26+. Possible values are `auto`, `no`, `noExcludeDescendants`, `yes`, and `yesExcludeDescendants`. The default value is `auto`.\n\n- `auto`: Let the Android System use its heuristics to determine if the view is important for autofill.\n- `no`: This view isn't important for autofill.\n- `noExcludeDescendants`: This view and its children aren't important for autofill.\n- `yes`: This view is important for autofill.\n- `yesExcludeDescendants`: This view is important for autofill, but its children aren't important for autofill.\n\n| Type                                                                       |\n| -------------------------------------------------------------------------- |\n| enum('auto', 'no', 'noExcludeDescendants', 'yes', 'yesExcludeDescendants') |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "inlineImageLeft": {
+      "raw": "If defined, the provided image resource will be rendered on the left. The image resource must be inside `/android/app/src/main/res/drawable` and referenced like\n\n```\n<TextInput\n inlineImageLeft='search_icon'\n/>\n```\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "string"
+    },
+    "inlineImagePadding": {
+      "raw": "Padding between the inline image, if any, and the text input itself.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "inputAccessoryViewID": {
+      "raw": "An optional identifier which links a custom [InputAccessoryView](inputaccessoryview.md) to this text input. The InputAccessoryView is rendered above the keyboard when this text input is focused.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "string"
+    },
+    "inputMode": {
+      "raw": "Works like the `inputmode` attribute in HTML, it determines which keyboard to open, e.g. `numeric` and has precedence over `keyboardType`.\n\nSupport the following values:\n\n- `none`\n- `text`\n- `decimal`\n- `numeric`\n- `tel`\n- `search`\n- `email`\n- `url`\n\n| Type                                                                        |\n| --------------------------------------------------------------------------- |\n| enum('decimal', 'email', 'none', 'numeric', 'search', 'tel', 'text', 'url') |\n\n---\n\n"
+    },
+    "keyboardAppearance": {
+      "raw": "Determines the color of the keyboard.\n\n| Type                             |\n| -------------------------------- |\n| enum('default', 'light', 'dark') |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "keyboardType": {
+      "raw": "Determines which keyboard to open, e.g.`numeric`.\n\nSee screenshots of all the types [here](http://lefkowitz.me/2018/04/30/visual-guide-to-react-native-textinput-keyboardtype-options/).\n\nThe following values work across platforms:\n\n- `default`\n- `number-pad`\n- `decimal-pad`\n- `numeric`\n- `email-address`\n- `phone-pad`\n- `url`\n\n_iOS Only_\n\nThe following values work on iOS only:\n\n- `ascii-capable`\n- `numbers-and-punctuation`\n- `name-phone-pad`\n- `twitter`\n- `web-search`\n\n_Android Only_\n\nThe following values work on Android only:\n\n- `visible-password`\n\n| Type                                                                                                                                                                                                    |\n| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| enum('default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search', 'visible-password') |\n\n---\n\n"
+    },
+    "maxFontSizeMultiplier": {
+      "raw": "Specifies largest possible scale a font can reach when `allowFontScaling` is enabled. Possible values:\n\n- `null/undefined` (default): inherit from the parent node or the global default (0)\n- `0`: no max, ignore parent/global default\n- `>= 1`: sets the `maxFontSizeMultiplier` of this node to this value\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "maxLength": {
+      "raw": "Limits the maximum number of characters that can be entered. Use this instead of implementing the logic in JS to avoid flicker.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "multiline": {
+      "raw": "If `true`, the text input can be multiple lines. The default value is `false`.\n\n:::note\nIt is important to note that this aligns the text to the top on iOS, and centers it on Android. Use with `textAlignVertical` set to `top` for the same behavior in both platforms.\n:::\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "numberOfLines": {
+      "raw": "Sets the number of lines for a `TextInput`. Use it with multiline set to `true` to be able to fill the lines.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "onBlur": {
+      "raw": "Callback that is called when the text input is blurred.\n\n> Note: If you are attempting to access the `text` value from `nativeEvent` keep in mind that the resulting value you get can be `undefined` which can cause unintended errors. If you are trying to find the last value of TextInput, you can use the [`onEndEditing`](textinput#onendediting) event, which is fired upon completion of editing.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onChange": {
+      "raw": "Callback that is called when the text input's text changes.\n\n| Type                                                  |\n| ----------------------------------------------------- |\n| (`{nativeEvent: {eventCount, target, text}}`) => void |\n\n---\n\n"
+    },
+    "onChangeText": {
+      "raw": "Callback that is called when the text input's text changes. Changed text is passed as a single string argument to the callback handler.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onContentSizeChange": {
+      "raw": "Callback that is called when the text input's content size changes.\n\nOnly called for multiline text inputs.\n\n| Type                                                       |\n| ---------------------------------------------------------- |\n| (`{nativeEvent: {contentSize: {width, height} }}`) => void |\n\n---\n\n"
+    },
+    "onEndEditing": {
+      "raw": "Callback that is called when text input ends.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onPressIn": {
+      "raw": "Callback that is called when a touch is engaged.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onPressOut": {
+      "raw": "Callback that is called when a touch is released.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onFocus": {
+      "raw": "Callback that is called when the text input is focused.\n\n| Type                                                |\n| --------------------------------------------------- |\n| ({nativeEvent: [LayoutEvent](layoutevent)}) => void |\n\n---\n\n"
+    },
+    "onKeyPress": {
+      "raw": "Callback that is called when a key is pressed. This will be called with object where `keyValue` is `'Enter'` or `'Backspace'` for respective keys and the typed-in character otherwise including `' '` for space. Fires before `onChange` callbacks. Note: on Android only the inputs from soft keyboard are handled, not the hardware keyboard inputs.\n\n| Type                                        |\n| ------------------------------------------- |\n| (`{nativeEvent: {key: keyValue} }`) => void |\n\n---\n\n"
+    },
+    "onLayout": {
+      "raw": "Invoked on mount and on layout changes.\n\n| Type                                                |\n| --------------------------------------------------- |\n| ({nativeEvent: [LayoutEvent](layoutevent)}) => void |\n\n---\n\n"
+    },
+    "onScroll": {
+      "raw": "Invoked on content scroll. May also contain other properties from `ScrollEvent` but on Android `contentSize` is not provided for performance reasons.\n\n| Type                                                |\n| --------------------------------------------------- |\n| (`{nativeEvent: {contentOffset: {x, y} }}`) => void |\n\n---\n\n"
+    },
+    "onSelectionChange": {
+      "raw": "Callback that is called when the text input selection is changed.\n\n| Type                                                  |\n| ----------------------------------------------------- |\n| (`{nativeEvent: {selection: {start, end} }}`) => void |\n\n---\n\n"
+    },
+    "onSubmitEditing": {
+      "raw": "Callback that is called when the text input's submit button is pressed.\n\n| Type                                                  |\n| ----------------------------------------------------- |\n| (`{nativeEvent: {text, eventCount, target}}`) => void |\n\nNote that on iOS this method isn't called when using `keyboardType=\"phone-pad\"`.\n\n---\n\n"
+    },
+    "placeholder": {
+      "raw": "The string that will be rendered before text input has been entered.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "placeholderTextColor": {
+      "raw": "The text color of the placeholder string.\n\n| Type               |\n| ------------------ |\n| [color](colors.md) |\n\n---\n\n"
+    },
+    "readOnly": {
+      "raw": "If `true`, text is not editable. The default value is `false`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "returnKeyLabel": {
+      "raw": "Sets the return key to the label. Use it instead of `returnKeyType`.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "string"
+    },
+    "returnKeyType": {
+      "raw": "Determines how the return key should look. On Android you can also use `returnKeyLabel`.\n\n_Cross platform_\n\nThe following values work across platforms:\n\n- `done`\n- `go`\n- `next`\n- `search`\n- `send`\n\n_Android Only_\n\nThe following values work on Android only:\n\n- `none`\n- `previous`\n\n_iOS Only_\n\nThe following values work on iOS only:\n\n- `default`\n- `emergency-call`\n- `google`\n- `join`\n- `route`\n- `yahoo`\n\n| Type                                                                                                                              |\n| --------------------------------------------------------------------------------------------------------------------------------- |\n| enum('done', 'go', 'next', 'search', 'send', 'none', 'previous', 'default', 'emergency-call', 'google', 'join', 'route', 'yahoo') |\n\n"
+    },
+    "rejectResponderTermination": {
+      "raw": "If `true`, allows TextInput to pass touch events to the parent component. This allows components such as SwipeableListView to be swipeable from the TextInput on iOS, as is the case on Android by default. If `false`, TextInput always asks to handle the input (except when disabled). The default value is `true`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "rows": {
+      "raw": "Sets the number of lines for a `TextInput`. Use it with multiline set to `true` to be able to fill the lines.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "scrollEnabled": {
+      "raw": "If `false`, scrolling of the text view will be disabled. The default value is `true`. Only works with `multiline={true}`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "secureTextEntry": {
+      "raw": "If `true`, the text input obscures the text entered so that sensitive text like passwords stay secure. The default value is `false`. Does not work with `multiline={true}`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "selection": {
+      "raw": "The start and end of the text input's selection. Set start and end to the same value to position the cursor.\n\n| Type                                |\n| ----------------------------------- |\n| object: {start: number,end: number} |\n\n---\n\n"
+    },
+    "selectionColor": {
+      "raw": "The highlight and cursor color of the text input.\n\n| Type               |\n| ------------------ |\n| [color](colors.md) |\n\n---\n\n"
+    },
+    "selectTextOnFocus": {
+      "raw": "If `true`, all text will automatically be selected on focus.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "showSoftInputOnFocus": {
+      "raw": "When `false`, it will prevent the soft keyboard from showing when the field is focused. The default value is `true`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "spellCheck": {
+      "raw": "If `false`, disables spell-check style (i.e. red underlines). The default value is inherited from `autoCorrect`.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "textAlign": {
+      "raw": "Align the input text to the left, center, or right sides of the input field.\n\nPossible values for `textAlign` are:\n\n- `left`\n- `center`\n- `right`\n\n| Type                            |\n| ------------------------------- |\n| enum('left', 'center', 'right') |\n\n---\n\n"
+    },
+    "textContentType": {
+      "raw": "Give the keyboard and the system information about the expected semantic meaning for the content that users enter.\n\nFor iOS 11+ you can set `textContentType` to `username` or `password` to enable autofill of login details from the device keychain.\n\nFor iOS 12+ `newPassword` can be used to indicate a new password input the user may want to save in the keychain, and `oneTimeCode` can be used to indicate that a field can be autofilled by a code arriving in an SMS.\n\nTo disable autofill, set `textContentType` to `none`.\n\nPossible values for `textContentType` are:\n\n- `none`\n- `URL`\n- `addressCity`\n- `addressCityAndState`\n- `addressState`\n- `countryName`\n- `creditCardNumber`\n- `emailAddress`\n- `familyName`\n- `fullStreetAddress`\n- `givenName`\n- `jobTitle`\n- `location`\n- `middleName`\n- `name`\n- `namePrefix`\n- `nameSuffix`\n- `nickname`\n- `organizationName`\n- `postalCode`\n- `streetAddressLine1`\n- `streetAddressLine2`\n- `sublocality`\n- `telephoneNumber`\n- `username`\n- `password`\n- `newPassword`\n- `oneTimeCode`\n\n| Type                                                                                                                                                                                                                                                                                                                                                                                                       |\n| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| enum('none', 'URL', 'addressCity', 'addressCityAndState', 'addressState', 'countryName', 'creditCardNumber', 'emailAddress', 'familyName', 'fullStreetAddress', 'givenName', 'jobTitle', 'location', 'middleName', 'name', 'namePrefix', 'nameSuffix', 'nickname', 'organizationName', 'postalCode', 'streetAddressLine1', 'streetAddressLine2', 'sublocality', 'telephoneNumber', 'username', 'password') |\n\n---\n\n",
+      "iOSOnly": true
+    },
+    "passwordRules": {
+      "raw": "When using `textContentType` as `newPassword` on iOS we can let the OS know the minimum requirements of the password so that it can generate one that will satisfy them. In order to create a valid string for `PasswordRules` take a look to the [Apple Docs](https://developer.apple.com/password-rules/).\n\n> If passwords generation dialog doesn't appear please make sure that:\n>\n> - AutoFill is enabled: **Settings** → **Passwords & Accounts** → toggle \"On\" the **AutoFill Passwords**,\n> - iCloud Keychain is used: **Settings** → **Apple ID** → **iCloud** → **Keychain** → toggle \"On\" the **iCloud Keychain**.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "string"
+    },
+    "style": {
+      "raw": "Note that not all Text styles are supported, an incomplete list of what is not supported includes:\n\n- `borderLeftWidth`\n- `borderTopWidth`\n- `borderRightWidth`\n- `borderBottomWidth`\n- `borderTopLeftRadius`\n- `borderTopRightRadius`\n- `borderBottomRightRadius`\n- `borderBottomLeftRadius`\n\nsee [Issue#7070](https://github.com/facebook/react-native/issues/7070) for more detail.\n\n[Styles](style.md)\n\n| Type                  |\n| --------------------- |\n| [Text](text.md#style) |\n\n---\n\n"
+    },
+    "textBreakStrategy": {
+      "raw": "Set text break strategy on Android API Level 23+, possible values are `simple`, `highQuality`, `balanced` The default value is `simple`.\n\n| Type                                      |\n| ----------------------------------------- |\n| enum('simple', 'highQuality', 'balanced') |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "underlineColorAndroid": {
+      "raw": "The color of the `TextInput` underline.\n\n| Type               |\n| ------------------ |\n| [color](colors.md) |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "value": {
+      "raw": "The value to show for the text input. `TextInput` is a controlled component, which means the native value will be forced to match this value prop if provided. For most uses, this works great, but in some cases this may cause flickering - one common cause is preventing edits by keeping value the same. In addition to setting the same value, either set `editable={false}`, or set/update `maxLength` to prevent unwanted edits without flicker.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "lineBreakStrategyIOS": {
+      "raw": "Set line break strategy on iOS 14+. Possible values are `none`, `standard`, `hangul-word` and `push-out`.\n\n| Type                                                        | Default  |\n| ----------------------------------------------------------- | -------- |\n| enum(`'none'`, `'standard'`, `'hangul-word'`, `'push-out'`) | `'none'` |\n\n",
+      "iOSOnly": true
+    }
+  },
+  "touchablehighlight": {
+    "activeOpacity": {
+      "raw": "Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1. Defaults to 0.85. Requires `underlayColor` to be set.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "onHideUnderlay": {
+      "raw": "Called immediately after the underlay is hidden.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onShowUnderlay": {
+      "raw": "Called immediately after the underlay is shown.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "style": {
+      "raw": "| Type       |\n| ---------- |\n| View.style |\n\n---\n\n"
+    },
+    "underlayColor": {
+      "raw": "The color of the underlay that will show through when the touch is active.\n\n| Type               |\n| ------------------ |\n| [color](colors.md) |\n\n---\n\n"
+    },
+    "hasTVPreferredFocus": {
+      "raw": "_(Apple TV only)_ TV preferred focus (see documentation for the View component).\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "nextFocusDown": {
+      "raw": "TV next focus down (see documentation for the View component).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusForward": {
+      "raw": "TV next focus forward (see documentation for the View component).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusLeft": {
+      "raw": "TV next focus left (see documentation for the View component).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusRight": {
+      "raw": "TV next focus right (see documentation for the View component).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusUp": {
+      "raw": "TV next focus up (see documentation for the View component).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "testOnly_pressed": {
+      "raw": "Handy for snapshot tests.\n\n| Type |\n| ---- |\n| bool |",
+      "type": "bool"
+    }
+  },
+  "touchableopacity": {
+    "style": {
+      "raw": "| Type                           |\n| ------------------------------ |\n| [View.style](view-style-props) |\n\n---\n\n"
+    },
+    "activeOpacity": {
+      "raw": "Determines what the opacity of the wrapped view should be when touch is active. Defaults to `0.2`.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "tvParallaxProperties <div class=\"label ios\">IOS</div>": {
+      "raw": "_(Apple TV only)_ Object with properties to control Apple TV parallax effects.\n\n- `enabled`: If `true`, parallax effects are enabled. Defaults to `true`.\n- `shiftDistanceX`: Defaults to `2.0`.\n- `shiftDistanceY`: Defaults to `2.0`.\n- `tiltAngle`: Defaults to `0.05`.\n- `magnification`: Defaults to `1.0`.\n- `pressMagnification`: Defaults to `1.0`.\n- `pressDuration`: Defaults to `0.3`.\n- `pressDelay`: Defaults to `0.0`.\n\n| Type   |\n| ------ |\n| object |\n\n---\n\n",
+      "type": "object"
+    },
+    "hasTVPreferredFocus": {
+      "raw": "_(Apple TV only)_ TV preferred focus (see documentation for the View component).\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "nextFocusDown": {
+      "raw": "TV next focus down (see documentation for the View component).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusForward": {
+      "raw": "TV next focus forward (see documentation for the View component).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusLeft": {
+      "raw": "TV next focus left (see documentation for the View component).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusRight": {
+      "raw": "TV next focus right (see documentation for the View component).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusUp": {
+      "raw": "TV next focus up (see documentation for the View component).\n\n| Type   |\n| ------ |\n| number |",
+      "androidOnly": true,
+      "type": "number"
+    }
+  },
+  "touchablewithoutfeedback": {
+    "accessibilityIgnoresInvertColors": {
+      "raw": "| Type    |\n| ------- |\n| Boolean |\n\n---\n\n"
+    },
+    "accessible": {
+      "raw": "When `true`, indicates that the view is an accessibility element. By default, all the touchable elements are accessible.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "accessibilityLabel": {
+      "raw": "Overrides the text that's read by the screen reader when the user interacts with the element. By default, the label is constructed by traversing all the children and accumulating all the `Text` nodes separated by space.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "accessibilityLanguage": {
+      "raw": "A value indicating which language should be used by the screen reader when the user interacts with the element. It should follow the [BCP 47 specification](https://www.rfc-editor.org/info/bcp47).\n\nSee the [iOS `accessibilityLanguage` doc](https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage) for more information.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "string"
+    },
+    "accessibilityHint": {
+      "raw": "An accessibility hint helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "accessibilityRole": {
+      "raw": "`accessibilityRole` communicates the purpose of a component to the user of an assistive technology.\n\n`accessibilityRole` can be one of the following:\n\n- `'none'` - Used when the element has no role.\n- `'button'` - Used when the element should be treated as a button.\n- `'link'` - Used when the element should be treated as a link.\n- `'search'` - Used when the text field element should also be treated as a search field.\n- `'image'` - Used when the element should be treated as an image. Can be combined with button or link, for example.\n- `'keyboardkey'` - Used when the element acts as a keyboard key.\n- `'text'` - Used when the element should be treated as static text that cannot change.\n- `'adjustable'` - Used when an element can be \"adjusted\" (e.g. a slider).\n- `'imagebutton'` - Used when the element should be treated as a button and is also an image.\n- `'header'` - Used when an element acts as a header for a content section (e.g. the title of a navigation bar).\n- `'summary'` - Used when an element can be used to provide a quick summary of current conditions in the app when the app first launches.\n- `'alert'` - Used when an element contains important text to be presented to the user.\n- `'checkbox'` - Used when an element represents a checkbox which can be checked, unchecked, or have mixed checked state.\n- `'combobox'` - Used when an element represents a combo box, which allows the user to select among several choices.\n- `'menu'` - Used when the component is a menu of choices.\n- `'menubar'` - Used when a component is a container of multiple menus.\n- `'menuitem'` - Used to represent an item within a menu.\n- `'progressbar'` - Used to represent a component which indicates progress of a task.\n- `'radio'` - Used to represent a radio button.\n- `'radiogroup'` - Used to represent a group of radio buttons.\n- `'scrollbar'` - Used to represent a scroll bar.\n- `'spinbutton'` - Used to represent a button which opens a list of choices.\n- `'switch'` - Used to represent a switch which can be turned on and off.\n- `'tab'` - Used to represent a tab.\n- `'tablist'` - Used to represent a list of tabs.\n- `'timer'` - Used to represent a timer.\n- `'toolbar'` - Used to represent a tool bar (a container of action buttons or components).\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "accessibilityState": {
+      "raw": "Describes the current state of a component to the user of an assistive technology.\n\nSee the [Accessibility guide](accessibility.md#accessibilitystate-ios-android) for more information.\n\n| Type                                                                                           |\n| ---------------------------------------------------------------------------------------------- |\n| object: {disabled: bool, selected: bool, checked: bool or 'mixed', busy: bool, expanded: bool} |\n\n---\n\n"
+    },
+    "accessibilityActions": {
+      "raw": "Accessibility actions allow an assistive technology to programmatically invoke the actions of a component. The `accessibilityActions` property should contain a list of action objects. Each action object should contain the field name and label.\n\nSee the [Accessibility guide](accessibility.md#accessibility-actions) for more information.\n\n| Type  |\n| ----- |\n| array |\n\n---\n\n",
+      "type": "array"
+    },
+    "aria-busy": {
+      "raw": "Indicates an element is being modified and that assistive technologies may want to wait until the changes are complete before informing the user about the update.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "aria-checked": {
+      "raw": "Indicates the state of a checkable element. This field can either take a boolean or the \"mixed\" string to represent mixed checkboxes.\n\n| Type             | Default |\n| ---------------- | ------- |\n| boolean, 'mixed' | false   |\n\n---\n\n",
+      "type": "boolean, 'mixed'"
+    },
+    "aria-disabled": {
+      "raw": "Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "aria-expanded": {
+      "raw": "Indicates whether an expandable element is currently expanded or collapsed.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "aria-hidden": {
+      "raw": "Indicates whether the accessibility elements contained within this accessibility element are hidden.\n\nFor example, in a window that contains sibling views `A` and `B`, setting `aria-hidden` to `true` on view `B` causes VoiceOver to ignore the elements in the view `B`.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "aria-label": {
+      "raw": "Defines a string value that labels an interactive element.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "aria-live": {
+      "raw": "Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.\n\n- **off** Accessibility services should not announce changes to this view.\n- **polite** Accessibility services should announce changes to this view.\n- **assertive** Accessibility services should interrupt ongoing speech to immediately announce changes to this view.\n\n| Type                                     | Default |\n| ---------------------------------------- | ------- |\n| enum(`'assertive'`, `'off'`, `'polite'`) | `'off'` |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "aria-modal": {
+      "raw": "Boolean value indicating whether VoiceOver should ignore the elements within views that are siblings of the receiver. Has precedence over the [`accessibilityViewIsModal`](#accessibilityviewismodal-ios) prop.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "boolean"
+    },
+    "aria-selected": {
+      "raw": "Indicates whether a selectable element is currently selected or not.\n\n| Type    |\n| ------- |\n| boolean |\n\n",
+      "type": "boolean"
+    },
+    "onAccessibilityAction": {
+      "raw": "Invoked when the user performs the accessibility actions. The only argument to this function is an event containing the name of the action to perform.\n\nSee the [Accessibility guide](accessibility.md#accessibility-actions) for more information.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "accessibilityValue": {
+      "raw": "Represents the current value of a component. It can be a textual description of a component's value, or for range-based components, such as sliders and progress bars, it contains range information (minimum, current, and maximum).\n\nSee the [Accessibility guide](accessibility.md#accessibilityvalue-ios-android) for more information.\n\n| Type                                                          |\n| ------------------------------------------------------------- |\n| object: {min: number, max: number, now: number, text: string} |\n\n---\n\n"
+    },
+    "aria-valuemax": {
+      "raw": "Represents the maximum value for range-based components, such as sliders and progress bars. Has precedence over the `max` value in the `accessibilityValue` prop.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "aria-valuemin": {
+      "raw": "Represents the maximum value for range-based components, such as sliders and progress bars. Has precedence over the `min` value in the `accessibilityValue` prop.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "aria-valuenow": {
+      "raw": "Represents the current value for range-based components, such as sliders and progress bars. Has precedence over the `now` value in the `accessibilityValue` prop.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "aria-valuetext": {
+      "raw": "Represents the textual description of the component. Has precedence over the `text` value in the `accessibilityValue` prop.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "delayLongPress": {
+      "raw": "Duration (in milliseconds) from `onPressIn` before `onLongPress` is called.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "delayPressIn": {
+      "raw": "Duration (in milliseconds), from the start of the touch, before `onPressIn` is called.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "delayPressOut": {
+      "raw": "Duration (in milliseconds), from the release of the touch, before `onPressOut` is called.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "disabled": {
+      "raw": "If true, disable all interactions for this component.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "hitSlop": {
+      "raw": "This defines how far your touch can start away from the button. This is added to `pressRetentionOffset` when moving off of the button.\n\n> The touch area never extends past the parent view bounds and the Z-index of sibling views always takes precedence if a touch hits two overlapping views.\n\n| Type                   |\n| ---------------------- |\n| [Rect](rect) or number |\n\n"
+    },
+    "id": {
+      "raw": "Used to locate this view from native code. Has precedence over `nativeID` prop.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "onBlur": {
+      "raw": "Invoked when the item loses focus.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onFocus": {
+      "raw": "Invoked when the item receives focus.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onLayout": {
+      "raw": "Invoked on mount and on layout changes.\n\n| Type                                                |\n| --------------------------------------------------- |\n| ({nativeEvent: [LayoutEvent](layoutevent)}) => void |\n\n---\n\n"
+    },
+    "onLongPress": {
+      "raw": "Called if the time after `onPressIn` lasts longer than 370 milliseconds. This time period can be customized with [`delayLongPress`](#delaylongpress).\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onPress": {
+      "raw": "Called when the touch is released, but not if cancelled (e.g. by a scroll that steals the responder lock). The first function argument is an event in form of [PressEvent](pressevent).\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onPressIn": {
+      "raw": "Called as soon as the touchable element is pressed and invoked even before onPress. This can be useful when making network requests. The first function argument is an event in form of [PressEvent](pressevent).\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onPressOut": {
+      "raw": "Called as soon as the touch is released even before onPress. The first function argument is an event in form of [PressEvent](pressevent).\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "pressRetentionOffset": {
+      "raw": "When the scroll view is disabled, this defines how far your touch may move off of the button, before deactivating the button. Once deactivated, try moving it back and you'll see that the button is once again reactivated! Move it back and forth several times while the scroll view is disabled. Ensure you pass in a constant to reduce memory allocations.\n\n| Type                   |\n| ---------------------- |\n| [Rect](rect) or number |\n\n---\n\n"
+    },
+    "nativeID": {
+      "raw": "| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "testID": {
+      "raw": "Used to locate this view in end-to-end tests.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "touchSoundDisabled": {
+      "raw": "If true, doesn't play a system sound on touch.\n\n| Type    |\n| ------- |\n| Boolean |",
+      "androidOnly": true
+    }
+  },
+  "view": {
+    "raw": "---\n\n",
+    "accessibilityActions": {
+      "raw": "Accessibility actions allow an assistive technology to programmatically invoke the actions of a component. The `accessibilityActions` property should contain a list of action objects. Each action object should contain the field name and label.\n\nSee the [Accessibility guide](accessibility.md#accessibility-actions) for more information.\n\n| Type  |\n| ----- |\n| array |\n\n---\n\n",
+      "type": "array"
+    },
+    "accessibilityElementsHidden": {
+      "raw": "A value indicating whether the accessibility elements contained within this accessibility element are hidden. Default is `false`.\n\nSee the [Accessibility guide](accessibility.md#accessibilityelementshidden-ios) for more information.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "accessibilityHint": {
+      "raw": "An accessibility hint helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "accessibilityLanguage": {
+      "raw": "A value indicating which language should be used by the screen reader when the user interacts with the element. It should follow the [BCP 47 specification](https://www.rfc-editor.org/info/bcp47).\n\nSee the [iOS `accessibilityLanguage` doc](https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage) for more information.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "string"
+    },
+    "accessibilityIgnoresInvertColors": {
+      "raw": "A value indicating this view should or should not be inverted when color inversion is turned on. A value of `true` will tell the view to not be inverted even if color inversion is turned on.\n\nSee the [Accessibility guide](accessibility.md#accessibilityignoresinvertcolors) for more information.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "accessibilityLabel": {
+      "raw": "Overrides the text that's read by the screen reader when the user interacts with the element. By default, the label is constructed by traversing all the children and accumulating all the `Text` nodes separated by space.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "accessibilityLiveRegion": {
+      "raw": "Indicates to accessibility services whether the user should be notified when this view changes. Works for Android API >= 19 only. Possible values:\n\n- `'none'` - Accessibility services should not announce changes to this view.\n- `'polite'`- Accessibility services should announce changes to this view.\n- `'assertive'` - Accessibility services should interrupt ongoing speech to immediately announce changes to this view.\n\nSee the [Android `View` docs](http://developer.android.com/reference/android/view/View.html#attr_android:accessibilityLiveRegion) for reference.\n\n| Type                                |\n| ----------------------------------- |\n| enum('none', 'polite', 'assertive') |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "accessibilityRole": {
+      "raw": "`accessibilityRole` communicates the purpose of a component to the user of an assistive technology.\n\n`accessibilityRole` can be one of the following:\n\n- `'none'` - Used when the element has no role.\n- `'button'` - Used when the element should be treated as a button.\n- `'link'` - Used when the element should be treated as a link.\n- `'search'` - Used when the text field element should also be treated as a search field.\n- `'image'` - Used when the element should be treated as an image. Can be combined with button or link, for example.\n- `'keyboardkey'` - Used when the element acts as a keyboard key.\n- `'text'` - Used when the element should be treated as static text that cannot change.\n- `'adjustable'` - Used when an element can be \"adjusted\" (e.g. a slider).\n- `'imagebutton'` - Used when the element should be treated as a button and is also an image.\n- `'header'` - Used when an element acts as a header for a content section (e.g. the title of a navigation bar).\n- `'summary'` - Used when an element can be used to provide a quick summary of current conditions in the app when the app first launches.\n- `'alert'` - Used when an element contains important text to be presented to the user.\n- `'checkbox'` - Used when an element represents a checkbox which can be checked, unchecked, or have mixed checked state.\n- `'combobox'` - Used when an element represents a combo box, which allows the user to select among several choices.\n- `'menu'` - Used when the component is a menu of choices.\n- `'menubar'` - Used when a component is a container of multiple menus.\n- `'menuitem'` - Used to represent an item within a menu.\n- `'progressbar'` - Used to represent a component which indicates progress of a task.\n- `'radio'` - Used to represent a radio button.\n- `'radiogroup'` - Used to represent a group of radio buttons.\n- `'scrollbar'` - Used to represent a scroll bar.\n- `'spinbutton'` - Used to represent a button which opens a list of choices.\n- `'switch'` - Used to represent a switch which can be turned on and off.\n- `'tab'` - Used to represent a tab.\n- `'tablist'` - Used to represent a list of tabs.\n- `'timer'` - Used to represent a timer.\n- `'toolbar'` - Used to represent a tool bar (a container of action buttons or components).\n- `'grid'` - Used with ScrollView, VirtualizedList, FlatList, or SectionList to represent a grid. Adds the in/out of grid announcements to the android GridView.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "accessibilityState": {
+      "raw": "Describes the current state of a component to the user of an assistive technology.\n\nSee the [Accessibility guide](accessibility.md#accessibilitystate-ios-android) for more information.\n\n| Type                                                                                           |\n| ---------------------------------------------------------------------------------------------- |\n| object: {disabled: bool, selected: bool, checked: bool or 'mixed', busy: bool, expanded: bool} |\n\n---\n\n"
+    },
+    "accessibilityValue": {
+      "raw": "Represents the current value of a component. It can be a textual description of a component's value, or for range-based components, such as sliders and progress bars, it contains range information (minimum, current, and maximum).\n\nSee the [Accessibility guide](accessibility.md#accessibilityvalue-ios-android) for more information.\n\n| Type                                                          |\n| ------------------------------------------------------------- |\n| object: {min: number, max: number, now: number, text: string} |\n\n---\n\n"
+    },
+    "accessibilityViewIsModal": {
+      "raw": "A value indicating whether VoiceOver should ignore the elements within views that are siblings of the receiver. Default is `false`.\n\nSee the [Accessibility guide](accessibility.md#accessibilityviewismodal-ios) for more information.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "accessible": {
+      "raw": "When `true`, indicates that the view is an accessibility element. By default, all the touchable elements are accessible.\n\n---\n\n"
+    },
+    "aria-busy": {
+      "raw": "Indicates an element is being modified and that assistive technologies may want to wait until the changes are complete before informing the user about the update.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "aria-checked": {
+      "raw": "Indicates the state of a checkable element. This field can either take a boolean or the \"mixed\" string to represent mixed checkboxes.\n\n| Type             | Default |\n| ---------------- | ------- |\n| boolean, 'mixed' | false   |\n\n---\n\n",
+      "type": "boolean, 'mixed'"
+    },
+    "aria-disabled": {
+      "raw": "Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "aria-expanded": {
+      "raw": "Indicates whether an expandable element is currently expanded or collapsed.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "aria-hidden": {
+      "raw": "Indicates whether the accessibility elements contained within this accessibility element are hidden.\n\nFor example, in a window that contains sibling views `A` and `B`, setting `aria-hidden` to `true` on view `B` causes VoiceOver to ignore the elements in the view `B`.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "aria-label": {
+      "raw": "Defines a string value that labels an interactive element.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "aria-labelledby": {
+      "raw": "Identifies the element that labels the element it is applied to. The value of `aria-labelledby` should match the [`nativeID`](view.md#nativeid) of the related element:\n\n```tsx\n<View>\n  <Text nativeID=\"formLabel\">Label for Input Field</Text>\n  <TextInput aria-label=\"input\" aria-labelledby=\"formLabel\" />\n</View>\n```\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "string"
+    },
+    "aria-live": {
+      "raw": "Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.\n\n- **off** Accessibility services should not announce changes to this view.\n- **polite** Accessibility services should announce changes to this view.\n- **assertive** Accessibility services should interrupt ongoing speech to immediately announce changes to this view.\n\n| Type                                     | Default |\n| ---------------------------------------- | ------- |\n| enum(`'assertive'`, `'off'`, `'polite'`) | `'off'` |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "aria-modal": {
+      "raw": "Boolean value indicating whether VoiceOver should ignore the elements within views that are siblings of the receiver. Has precedence over the [`accessibilityViewIsModal`](#accessibilityviewismodal-ios) prop.\n\n| Type    | Default |\n| ------- | ------- |\n| boolean | false   |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "boolean"
+    },
+    "aria-selected": {
+      "raw": "Indicates whether a selectable element is currently selected or not.\n\n| Type    |\n| ------- |\n| boolean |\n\n",
+      "type": "boolean"
+    },
+    "aria-valuemax": {
+      "raw": "Represents the maximum value for range-based components, such as sliders and progress bars. Has precedence over the `max` value in the `accessibilityValue` prop.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "aria-valuemin": {
+      "raw": "Represents the maximum value for range-based components, such as sliders and progress bars. Has precedence over the `min` value in the `accessibilityValue` prop.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "aria-valuenow": {
+      "raw": "Represents the current value for range-based components, such as sliders and progress bars. Has precedence over the `now` value in the `accessibilityValue` prop.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "aria-valuetext": {
+      "raw": "Represents the textual description of the component. Has precedence over the `text` value in the `accessibilityValue` prop.\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "collapsable": {
+      "raw": "Views that are only used to layout their children or otherwise don't draw anything may be automatically removed from the native hierarchy as an optimization. Set this property to `false` to disable this optimization and ensure that this `View` exists in the native view hierarchy.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "bool"
+    },
+    "focusable": {
+      "raw": "Whether this `View` should be focusable with a non-touch input device, eg. receive focus with a hardware keyboard.\n\n| Type    |\n| ------- |\n| boolean |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "boolean"
+    },
+    "hitSlop": {
+      "raw": "This defines how far a touch event can start away from the view. Typical interface guidelines recommend touch targets that are at least 30 - 40 points/density-independent pixels.\n\nFor example, if a touchable view has a height of 20 the touchable height can be extended to 40 with `hitSlop={{top: 10, bottom: 10, left: 0, right: 0}}`\n\n> The touch area never extends past the parent view bounds and the Z-index of sibling views always takes precedence if a touch hits two overlapping views.\n\n| Type                                                               |\n| ------------------------------------------------------------------ |\n| object: {top: number, left: number, bottom: number, right: number} |\n\n---\n\n"
+    },
+    "id": {
+      "raw": "Used to locate this view from native classes. Has precedence over `nativeID` prop.\n\n> This disables the 'layout-only view removal' optimization for this view!\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "importantForAccessibility": {
+      "raw": "Controls how view is important for accessibility which is if it fires accessibility events and if it is reported to accessibility services that query the screen. Works for Android only.\n\nPossible values:\n\n- `'auto'` - The system determines whether the view is important for accessibility - default (recommended).\n- `'yes'` - The view is important for accessibility.\n- `'no'` - The view is not important for accessibility.\n- `'no-hide-descendants'` - The view is not important for accessibility, nor are any of its descendant views.\n\nSee the [Android `importantForAccessibility` docs](http://developer.android.com/reference/android/R.attr.html#importantForAccessibility) for reference.\n\n| Type                                             |\n| ------------------------------------------------ |\n| enum('auto', 'yes', 'no', 'no-hide-descendants') |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "nativeID": {
+      "raw": "Used to locate this view from native classes.\n\n> This disables the 'layout-only view removal' optimization for this view!\n\n| Type   |\n| ------ |\n| string |\n\n---\n\n",
+      "type": "string"
+    },
+    "needsOffscreenAlphaCompositing": {
+      "raw": "Whether this `View` needs to rendered offscreen and composited with an alpha in order to preserve 100% correct colors and blending behavior. The default (`false`) falls back to drawing the component and its children with an alpha applied to the paint used to draw each element instead of rendering the full component offscreen and compositing it back with an alpha value. This default may be noticeable and undesired in the case where the `View` you are setting an opacity on has multiple overlapping elements (e.g. multiple overlapping `View`s, or text and a background).\n\nRendering offscreen to preserve correct alpha behavior is extremely expensive and hard to debug for non-native developers, which is why it is not turned on by default. If you do need to enable this property for an animation, consider combining it with renderToHardwareTextureAndroid if the view **contents** are static (i.e. it doesn't need to be redrawn each frame). If that property is enabled, this View will be rendered off-screen once, saved in a hardware texture, and then composited onto the screen with an alpha each frame without having to switch rendering targets on the GPU.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "nextFocusDown": {
+      "raw": "Designates the next view to receive focus when the user navigates down. See the [Android documentation](https://developer.android.com/reference/android/view/View.html#attr_android:nextFocusDown).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusForward": {
+      "raw": "Designates the next view to receive focus when the user navigates forward. See the [Android documentation](https://developer.android.com/reference/android/view/View.html#attr_android:nextFocusForward).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusLeft": {
+      "raw": "Designates the next view to receive focus when the user navigates left. See the [Android documentation](https://developer.android.com/reference/android/view/View.html#attr_android:nextFocusLeft).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusRight": {
+      "raw": "Designates the next view to receive focus when the user navigates right. See the [Android documentation](https://developer.android.com/reference/android/view/View.html#attr_android:nextFocusRight).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "nextFocusUp": {
+      "raw": "Designates the next view to receive focus when the user navigates up. See the [Android documentation](https://developer.android.com/reference/android/view/View.html#attr_android:nextFocusUp).\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "number"
+    },
+    "onAccessibilityAction": {
+      "raw": "Invoked when the user performs the accessibility actions. The only argument to this function is an event containing the name of the action to perform.\n\nSee the [Accessibility guide](accessibility.md#accessibility-actions) for more information.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onAccessibilityEscape": {
+      "raw": "When `accessible` is `true`, the system will invoke this function when the user performs the escape gesture.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "function"
+    },
+    "onAccessibilityTap": {
+      "raw": "When `accessible` is true, the system will try to invoke this function when the user performs accessibility tap gesture.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onLayout": {
+      "raw": "Invoked on mount and on layout changes.\n\nThis event is fired immediately once the layout has been calculated, but the new layout may not yet be reflected on the screen at the time the event is received, especially if a layout animation is in progress.\n\n| Type                                                |\n| --------------------------------------------------- |\n| ({nativeEvent: [LayoutEvent](layoutevent)}) => void |\n\n---\n\n"
+    },
+    "onMagicTap": {
+      "raw": "When `accessible` is `true`, the system will invoke this function when the user performs the magic tap gesture.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "function"
+    },
+    "onMoveShouldSetResponder": {
+      "raw": "Does this view want to \"claim\" touch responsiveness? This is called for every touch move on the `View` when it is not the responder.\n\n| Type                                                 |\n| ---------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => boolean |\n\n---\n\n"
+    },
+    "onMoveShouldSetResponderCapture": {
+      "raw": "If a parent `View` wants to prevent a child `View` from becoming responder on a move, it should have this handler which returns `true`.\n\n| Type                                                 |\n| ---------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => boolean |\n\n---\n\n"
+    },
+    "onResponderGrant": {
+      "raw": "The View is now responding for touch events. This is the time to highlight and show the user what is happening.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onResponderMove": {
+      "raw": "The user is moving their finger.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onResponderReject": {
+      "raw": "Another responder is already active and will not release it to that `View` asking to be the responder.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onResponderRelease": {
+      "raw": "Fired at the end of the touch.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onResponderTerminate": {
+      "raw": "The responder has been taken from the `View`. Might be taken by other views after a call to `onResponderTerminationRequest`, or might be taken by the OS without asking (e.g., happens with control center/ notification center on iOS)\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onResponderTerminationRequest": {
+      "raw": "Some other `View` wants to become responder and is asking this `View` to release its responder. Returning `true` allows its release.\n\n| Type                                              |\n| ------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => void |\n\n---\n\n"
+    },
+    "onStartShouldSetResponder": {
+      "raw": "Does this view want to become responder on the start of a touch?\n\n| Type                                                 |\n| ---------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => boolean |\n\n---\n\n"
+    },
+    "onStartShouldSetResponderCapture": {
+      "raw": "If a parent `View` wants to prevent a child `View` from becoming responder on a touch start, it should have this handler which returns `true`.\n\n| Type                                                 |\n| ---------------------------------------------------- |\n| ({nativeEvent: [PressEvent](pressevent)}) => boolean |\n\n---\n\n"
+    },
+    "pointerEvents": {
+      "raw": "Controls whether the `View` can be the target of touch events.\n\n- `'auto'`: The View can be the target of touch events.\n- `'none'`: The View is never the target of touch events.\n- `'box-none'`: The View is never the target of touch events but its subviews can be. It behaves like if the view had the following classes in CSS:\n\n```\n.box-none {\n     pointer-events: none;\n}\n.box-none * {\n     pointer-events: auto;\n}\n```\n\n- `'box-only'`: The view can be the target of touch events but its subviews cannot be. It behaves like if the view had the following classes in CSS:\n\n```\n.box-only {\n     pointer-events: auto;\n}\n.box-only * {\n     pointer-events: none;\n}\n```\n\n| Type                                         |\n| -------------------------------------------- |\n| enum('box-none', 'none', 'box-only', 'auto') |\n\n---\n\n"
+    },
+    "removeClippedSubviews": {
+      "raw": "This is a reserved performance property exposed by `RCTView` and is useful for scrolling content when there are many subviews, most of which are offscreen. For this property to be effective, it must be applied to a view that contains many subviews that extend outside its bound. The subviews must also have `overflow: hidden`, as should the containing view (or one of its superviews).\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "renderToHardwareTextureAndroid": {
+      "raw": "Whether this `View` should render itself (and all of its children) into a single hardware texture on the GPU.\n\nOn Android, this is useful for animations and interactions that only modify opacity, rotation, translation, and/or scale: in those cases, the view doesn't have to be redrawn and display lists don't need to be re-executed. The texture can be re-used and re-composited with different parameters. The downside is that this can use up limited video memory, so this prop should be set back to false at the end of the interaction/animation.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "androidOnly": true,
+      "type": "bool"
+    },
+    "role": {
+      "raw": "`role` communicates the purpose of a component to the user of an assistive technology. Has precedence over the [`accessibilityRole`](view#accessibilityrole) prop.\n\n| Type                       |\n| -------------------------- |\n| [Role](accessibility#role) |\n\n---\n\n"
+    },
+    "shouldRasterizeIOS": {
+      "raw": "Whether this `View` should be rendered as a bitmap before compositing.\n\nOn iOS, this is useful for animations and interactions that do not modify this component's dimensions nor its children; for example, when translating the position of a static view, rasterization allows the renderer to reuse a cached bitmap of a static view and quickly composite it during each frame.\n\nRasterization incurs an off-screen drawing pass and the bitmap consumes memory. Test and measure when using this property.\n\n| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "iOSOnly": true,
+      "type": "bool"
+    },
+    "style": {
+      "raw": "| Type                           |\n| ------------------------------ |\n| [View Style](view-style-props) |\n\n---\n\n"
+    },
+    "tabIndex": {
+      "raw": "Whether this `View` should be focusable with a non-touch input device, eg. receive focus with a hardware keyboard.\nSupports the following values:\n\n- `0` - View is focusable\n- `-1` - View is not focusable\n\n| Type        |\n| ----------- |\n| enum(0, -1) |\n\n---\n\n",
+      "androidOnly": true
+    },
+    "testID": {
+      "raw": "Used to locate this view in end-to-end tests.\n\n> This disables the 'layout-only view removal' optimization for this view!\n\n| Type   |\n| ------ |\n| string |",
+      "type": "string"
+    }
+  },
+  "virtualizedlist": {
+    "data": {
+      "raw": "Opaque data type passed to `getItem` and `getItemCount` to retrieve items.\n\n| Type |\n| ---- |\n| any  |\n\n---\n\n"
+    },
+    "**getItem**": {
+      "raw": "```tsx\n(data: any, index: number) => any;\n```\n\nA generic accessor for extracting an item from any sort of data blob.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "required": true,
+      "type": "function"
+    },
+    "**getItemCount**": {
+      "raw": "```tsx\n(data: any) => number;\n```\n\nDetermines how many items are in the data blob.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "required": true,
+      "type": "function"
+    },
+    "**renderItem**": {
+      "raw": "```tsx\n(info: any) => ?React.Element<any>\n```\n\nTakes an item from `data` and renders it into the list\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "required": true,
+      "type": "function"
+    },
+    "CellRendererComponent": {
+      "raw": "Each cell is rendered using this element. Can be a React Component Class, or a render function. Defaults to using [`View`](view.md).\n\n| Type                |\n| ------------------- |\n| component, function |\n\n---\n\n"
+    },
+    "ItemSeparatorComponent": {
+      "raw": "Rendered in between each item, but not at the top or bottom. By default, `highlighted` and `leadingItem` props are provided. `renderItem` provides `separators.highlight`/`unhighlight` which will update the `highlighted` prop, but you can also add custom props with `separators.updateProps`. Can be a React Component (e.g. `SomeComponent`), or a React element (e.g. `<SomeComponent />`).\n\n| Type                         |\n| ---------------------------- |\n| component, function, element |\n\n---\n\n"
+    },
+    "ListEmptyComponent": {
+      "raw": "Rendered when the list is empty. Can be a React Component (e.g. `SomeComponent`), or a React element (e.g. `<SomeComponent />`).\n\n| Type               |\n| ------------------ |\n| component, element |\n\n---\n\n"
+    },
+    "ListItemComponent": {
+      "raw": "Each data item is rendered using this element. Can be a React Component Class, or a render function.\n\n| Type                |\n| ------------------- |\n| component, function |\n\n---\n\n"
+    },
+    "ListFooterComponent": {
+      "raw": "Rendered at the bottom of all the items. Can be a React Component (e.g. `SomeComponent`), or a React element (e.g. `<SomeComponent />`).\n\n| Type               |\n| ------------------ |\n| component, element |\n\n---\n\n"
+    },
+    "ListFooterComponentStyle": {
+      "raw": "Styling for internal View for `ListFooterComponent`.\n\n| Type          | Required |\n| ------------- | -------- |\n| ViewStyleProp | No       |\n\n---\n\n"
+    },
+    "ListHeaderComponent": {
+      "raw": "Rendered at the top of all the items. Can be a React Component (e.g. `SomeComponent`), or a React element (e.g. `<SomeComponent />`).\n\n| Type               |\n| ------------------ |\n| component, element |\n\n---\n\n"
+    },
+    "ListHeaderComponentStyle": {
+      "raw": "Styling for internal View for `ListHeaderComponent`.\n\n| Type                           |\n| ------------------------------ |\n| [View Style](view-style-props) |\n\n---\n\n"
+    },
+    "debug": {
+      "raw": "`debug` will turn on extra logging and visual overlays to aid with debugging both usage and implementation, but with a significant perf hit.\n\n| Type    |\n| ------- |\n| boolean |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "disableVirtualization": {
+      "raw": "> **Deprecated.** Virtualization provides significant performance and memory optimizations, but fully unmounts react instances that are outside of the render window. You should only need to disable this for debugging purposes.\n\n| Type    |\n| ------- |\n| boolean |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "extraData": {
+      "raw": "A marker property for telling the list to re-render (since it implements `PureComponent`). If any of your `renderItem`, Header, Footer, etc. functions depend on anything outside of the `data` prop, stick it here and treat it immutably.\n\n| Type |\n| ---- |\n| any  |\n\n---\n\n"
+    },
+    "getItemLayout": {
+      "raw": "```tsx\n(\n  data: any,\n  index: number,\n) => {length: number, offset: number, index: number}\n```\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "horizontal": {
+      "raw": "If `true`, renders items next to each other horizontally instead of stacked vertically.\n\n| Type    |\n| ------- |\n| boolean |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "initialNumToRender": {
+      "raw": "How many items to render in the initial batch. This should be enough to fill the screen but not much more. Note these items will never be unmounted as part of the windowed rendering in order to improve perceived performance of scroll-to-top actions.\n\n| Type   | Default |\n| ------ | ------- |\n| number | `10`    |\n\n---\n\n",
+      "type": "number"
+    },
+    "initialScrollIndex": {
+      "raw": "Instead of starting at the top with the first item, start at `initialScrollIndex`. This disables the \"scroll to top\" optimization that keeps the first `initialNumToRender` items always rendered and immediately renders the items starting at this initial index. Requires `getItemLayout` to be implemented.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "inverted": {
+      "raw": "Reverses the direction of scroll. Uses scale transforms of `-1`.\n\n| Type    |\n| ------- |\n| boolean |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "listKey": {
+      "raw": "A unique identifier for this list. If there are multiple VirtualizedLists at the same level of nesting within another VirtualizedList, this key is necessary for virtualization to work properly.\n\n| Type   | Required |\n| ------ | -------- |\n| string | True     |\n\n---\n\n",
+      "type": "string"
+    },
+    "keyExtractor": {
+      "raw": "```tsx\n(item: any, index: number) => string;\n```\n\nUsed to extract a unique key for a given item at the specified index. Key is used for caching and as the react key to track item re-ordering. The default extractor checks `item.key`, then `item.id`, and then falls back to using the index, like React does.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "maxToRenderPerBatch": {
+      "raw": "The maximum number of items to render in each incremental render batch. The more rendered at once, the better the fill rate, but responsiveness may suffer because rendering content may interfere with responding to button taps or other interactions.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "onEndReached": {
+      "raw": "```tsx\n(info: {distanceFromEnd: number}) => void;\n```\n\nCalled once when the scroll position gets within `onEndReachedThreshold` of the rendered content.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onEndReachedThreshold": {
+      "raw": "How far from the end (in units of visible length of the list) the bottom edge of the list must be from the end of the content to trigger the `onEndReached` callback. Thus a value of 0.5 will trigger `onEndReached` when the end of the content is within half the visible length of the list.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "onRefresh": {
+      "raw": "```tsx\n() => void;\n```\n\nIf provided, a standard `RefreshControl` will be added for \"Pull to Refresh\" functionality. Make sure to also set the `refreshing` prop correctly.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onScrollToIndexFailed": {
+      "raw": "```tsx\n(info: {\n  index: number,\n  highestMeasuredFrameIndex: number,\n  averageItemLength: number,\n}) => void;\n```\n\nUsed to handle failures when scrolling to an index that has not been measured yet. Recommended action is to either compute your own offset and `scrollTo` it, or scroll as far as possible and then try again after more items have been rendered.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "onViewableItemsChanged": {
+      "raw": "Called when the viewability of rows changes, as defined by the `viewabilityConfig` prop.\n\n| Type                                                                                                             |\n| ---------------------------------------------------------------------------------------------------------------- |\n| (callback: {changed: array of [ViewToken](viewtoken)s, viewableItems: array of [ViewToken](viewtoken)s}) => void |\n\n---\n\n"
+    },
+    "persistentScrollbar": {
+      "raw": "| Type |\n| ---- |\n| bool |\n\n---\n\n",
+      "type": "bool"
+    },
+    "progressViewOffset": {
+      "raw": "Set this when offset is needed for the loading indicator to show correctly.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "refreshControl": {
+      "raw": "A custom refresh control element. When set, it overrides the default `<RefreshControl>` component built internally. The onRefresh and refreshing props are also ignored. Only works for vertical VirtualizedList.\n\n| Type    |\n| ------- |\n| element |\n\n---\n\n"
+    },
+    "refreshing": {
+      "raw": "Set this true while waiting for new data from a refresh.\n\n| Type    |\n| ------- |\n| boolean |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "removeClippedSubviews": {
+      "raw": "This may improve scroll performance for large lists.\n\n> Note: May have bugs (missing content) in some circumstances - use at your own risk.\n\n| Type    |\n| ------- |\n| boolean |\n\n---\n\n",
+      "type": "boolean"
+    },
+    "renderScrollComponent": {
+      "raw": "```tsx\n(props: object) => element;\n```\n\nRender a custom scroll component, e.g. with a differently styled `RefreshControl`.\n\n| Type     |\n| -------- |\n| function |\n\n---\n\n",
+      "type": "function"
+    },
+    "viewabilityConfig": {
+      "raw": "See `ViewabilityHelper.js` for flow type and further documentation.\n\n| Type              |\n| ----------------- |\n| ViewabilityConfig |\n\n---\n\n"
+    },
+    "viewabilityConfigCallbackPairs": {
+      "raw": "List of `ViewabilityConfig`/`onViewableItemsChanged` pairs. A specific `onViewableItemsChanged` will be called when its corresponding `ViewabilityConfig`'s conditions are met. See `ViewabilityHelper.js` for flow type and further documentation.\n\n| Type                                   |\n| -------------------------------------- |\n| array of ViewabilityConfigCallbackPair |\n\n---\n\n"
+    },
+    "updateCellsBatchingPeriod": {
+      "raw": "Amount of time between low-pri item render batches, e.g. for rendering items quite a ways off screen. Similar fill rate/responsiveness tradeoff as `maxToRenderPerBatch`.\n\n| Type   |\n| ------ |\n| number |\n\n---\n\n",
+      "type": "number"
+    },
+    "windowSize": {
+      "raw": "Determines the maximum number of items rendered outside of the visible area, in units of visible lengths. So if your list fills the screen, then `windowSize={21}` (the default) will render the visible screen area plus up to 10 screens above and 10 below the viewport. Reducing this number will reduce memory consumption and may improve performance, but will increase the chance that fast scrolling may reveal momentary blank areas of unrendered content.\n\n| Type   |\n| ------ |\n| number |\n\n",
+      "type": "number"
+    }
+  }
+}
