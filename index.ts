@@ -2,7 +2,7 @@ const md2json = require('./md2json');
 const fs = require('fs').promises;
 
 
-const types = ["string", "object", "bool", "boolean", "array", "number", "function", "boolean, 'mixed'"];
+const types = ["string", "object", "bool", "boolean", "array", "number", "function", "any", "boolean, 'mixed'"];
 function typeFrom(rawData: string): string | undefined {
     if (!rawData) return undefined;
     // XXX could to better by splitting on |  or parse markdown tableau (m2json do not do it)
